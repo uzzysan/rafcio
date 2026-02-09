@@ -22,16 +22,16 @@ export function Navbar() {
     }, []);
 
     const navLinks = [
-        { href: '#about', label: t('about') },
-        { href: '#projects', label: t('projects') },
-        { href: '#contact', label: t('contact') },
+        { href: '#about', label: t('nav.about') },
+        { href: '#projects', label: t('nav.projects') },
+        { href: '#contact', label: t('nav.contact') },
     ];
 
     return (
         <nav
             className={clsx(
                 "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
-                isScrolled ? "bg-white/80 dark:bg-[#1c1917]/80 backdrop-blur-md shadow-sm border-b border-gray-200/50 dark:border-white/5" : "bg-transparent"
+                isScrolled ? "bg-white/80 dark:bg-[#0a0a0a]/80 backdrop-blur-md shadow-sm border-b border-gray-200/50 dark:border-white/5" : "bg-transparent"
             )}
         >
             <div className="container mx-auto px-6 h-16 flex items-center justify-between">
@@ -80,7 +80,7 @@ export function Navbar() {
 
             {/* Mobile Menu */}
             {isMobileMenuOpen && (
-                <div className="md:hidden bg-white dark:bg-[#1c1917] border-b border-gray-200 dark:border-white/5 py-4 px-6 flex flex-col gap-4">
+                <div className="md:hidden bg-white dark:bg-[#0a0a0a] border-b border-gray-200 dark:border-white/5 py-4 px-6 flex flex-col gap-4">
                     {navLinks.map((link) => (
                         <a
                             key={link.href}

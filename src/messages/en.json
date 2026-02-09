@@ -15,7 +15,12 @@
         "name": "Name",
         "email": "Email",
         "message": "Message",
-        "projects": {
+        "nav": {
+            "about": "About Me",
+            "projects": "Projects",
+            "contact": "Contact"
+        },
+        "projectsList": {
             "ev_assist": {
                 "title": "EV Assist",
                 "description": "A PWA application for calculating electric vehicle charging needs based on current battery level and distance to destination."

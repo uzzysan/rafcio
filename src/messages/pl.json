@@ -15,7 +15,12 @@
         "name": "Imię",
         "email": "Email",
         "message": "Wiadomość",
-        "projects": {
+        "nav": {
+            "about": "O mnie",
+            "projects": "Projekty",
+            "contact": "Kontakt"
+        },
+        "projectsList": {
             "ev_assist": {
                 "title": "EV Assist",
                 "description": "Aplikacja PWA do obliczania zapotrzebowania na ładowanie samochodu elektrycznego na podstawie poziomu baterii i dystansu."
