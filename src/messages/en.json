@@ -1,0 +1,29 @@
+{
+    "HomePage": {
+        "title": "Rafał Maculewicz",
+        "role": "End-to-End System Engineer | Microsoft Analytics Expert | Scrum Master",
+        "slogan": "Data that speaks the language of your business.",
+        "aboutHeading": "About Me",
+        "aboutText1": "I am a specialist who builds bridges between complex technology and real business needs. My career path is a unique blend of the IT world and management – before fully dedicating myself to data analytics, I gained extensive experience as a Marketing Manager at the international corporation, Bostik.",
+        "aboutText2": "This background ensures that when I build Power BI dashboards or design Azure architecture, I don’t just think about the code. I think about how that data will impact your margins, sales efficiency, and decision-making speed. I help companies stop \"guessing\" and start acting based on facts.",
+        "projectsHeading": "How can I help your company?",
+        "coursesHeading": "Experience & Certifications",
+        "contactHeading": "Contact",
+        "contactText": "You have the data, but do you have the insights? Let’s talk about how I can help your business grow.",
+        "sendMessage": "Send Message",
+        "messageSent": "Message Sent!",
+        "name": "Name",
+        "email": "Email",
+        "message": "Message",
+        "projects": {
+            "ev_assist": {
+                "title": "EV Assist",
+                "description": "A PWA application for calculating electric vehicle charging needs based on current battery level and distance to destination."
+            },
+            "fairpact": {
+                "title": "FairPact",
+                "description": "A web application designed to analyze contracts and identify prohibited clauses using OCR and NLP."
+            }
+        }
+    }
+}
