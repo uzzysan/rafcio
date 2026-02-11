@@ -1,34 +1,177 @@
 {
     "HomePage": {
         "title": "Rafał Maculewicz",
-        "role": "End-to-End System Engineer | Microsoft Analytics Expert | Scrum Master",
-        "slogan": "Dane, które mówią językiem Twojego biznesu.",
-        "aboutHeading": "O mnie",
-        "aboutText1": "Jestem specjalistą, który buduje mosty między skomplikowaną technologią a realnymi potrzebami biznesu. Moja ścieżka zawodowa to unikalne połączenie świata IT oraz zarządzania – zanim całkowicie poświęciłem się analityce danych, zdobywałem doświadczenie jako Marketing Manager w międzynarodowym koncernie Bostik.",
-        "aboutText2": "Dzięki temu, tworząc dashboardy w Power BI czy projektując architekturę w Azure, nie myślę tylko o kodzie. Myślę o tym, jak te dane wpłyną na Twoją marżę, efektywność sprzedaży i szybkość podejmowania decyzji. Pomagam firmom przestać „zgadywać” i zacząć działać w oparciu o fakty.",
-        "projectsHeading": "W czym mogę pomóc Twojej firmie?",
-        "coursesHeading": "Doświadczenie i Certyfikaty",
-        "contactHeading": "Kontakt",
+        "role": "Analityk Danych • Ekspert Power BI • Programista",
+        "slogan": "Przekształcam złożone dane w strategiczne decyzje biznesowe.",
+        
+        "hero": {
+            "greeting": "Cześć, jestem",
+            "description": "Pomagam organizacjom wykorzystać potencjał ich danych poprzez zaawansowaną analitykę, niestandardowe rozwiązania Power BI i dedykowane oprogramowanie. Współpracuję z firmami każdej wielkości – od lokalnych przedsiębiorstw po międzynarodowe korporacje.",
+            "powerbiBadge": "Ekspert",
+            "azureBadge": "Certyfikowany",
+            "ctaPrimary": "Porozmawiajmy",
+            "ctaSecondary": "Zobacz Projekty",
+            "scroll": "Przewiń",
+            "stats": {
+                "years": "Lat Doświadczenia",
+                "satisfaction": "Zadowolenie Klientów"
+            }
+        },
+
+        "nav": {
+            "about": "O mnie",
+            "services": "Usługi",
+            "projects": "Projekty",
+            "experience": "Doświadczenie",
+            "contact": "Kontakt",
+            "hire": "Napisz do mnie",
+            "language": "Język",
+            "theme": "Motyw"
+        },
+
+        "about": {
+            "label": "O Mnie",
+            "subtitle": "Buduję mosty między technologią a strategią biznesową",
+            "heading": "Więcej Niż Tylko Kod",
+            "skills": "Główne Specjalizacje",
+            "features": {
+                "analytics": {
+                    "title": "Analityka Danych",
+                    "description": "Przekształcanie surowych danych w wartościowe informacje biznesowe poprzez zaawansowaną analitykę i techniki wizualizacji."
+                },
+                "development": {
+                    "title": "Rozwój Oprogramowania",
+                    "description": "Tworzenie dedykowanych rozwiązań software'owych, aplikacji webowych i narzędzi automatyzacji usprawniających procesy biznesowe."
+                },
+                "training": {
+                    "title": "Szkolenia Power BI",
+                    "description": "Wzmacnianie zespołów kompleksowymi szkoleniami Power BI, od podstaw po zaawansowany DAX i modelowanie danych."
+                },
+                "consulting": {
+                    "title": "Konsulting Strategiczny",
+                    "description": "Budowanie mostów między technologią a strategią biznesową w celu wspierania podejmowania decyzji opartych na danych."
+                }
+            }
+        },
+        "aboutText1": "Jestem specjalistą, który buduje mosty między skomplikowaną technologią a realnymi potrzebami biznesu. Moja ścieżka zawodowa to unikalne połączenie świata IT oraz zarządzania – zanim całkowicie poświęciłem się analityce danych, zdobywałem doświadczenie jako Menedżer Marketingu w międzynarodowym koncernie Bostik.",
+        "aboutText2": "Dzięki temu, tworząc dashboardy w Power BI czy projektując architekturę w Azure, nie myślę tylko o kodzie. Myślę o tym, jak te dane wpłyną na Twoją marżę, efektywność sprzedaży i szybkość podejmowania decyzji. Pomagam firmom przestać 'zgadywać' i zacząć działać w oparciu o fakty.",
+
+        "services": {
+            "label": "Usługi",
+            "subtitle": "Kompleksowe rozwiązania analityczne i programistyczne dopasowane do Twoich potrzeb",
+            "popular": "Najpopularniejsze",
+            "cta": "Skontaktuj się",
+            "trusted": "Zaufali mi liderzy branży",
+            
+            "powerbi": {
+                "title": "Rozwiązania Power BI",
+                "description": "Kompleksowe systemy Business Intelligence, które przekształcają surowe dane w wartościowe informacje.",
+                "f1": "Projektowanie i tworzenie dashboardów",
+                "f2": "Zaawansowane obliczenia DAX i modelowanie danych",
+                "f3": "Wdrażanie raportów w skali korporacyjnej",
+                "f4": "Optymalizacja wydajności i zarządzanie"
+            },
+            "development": {
+                "title": "Rozwój Oprogramowania",
+                "description": "Dedykowane rozwiązania software'owe zbudowane z wykorzystaniem nowoczesnych technologii.",
+                "f1": "Aplikacje webowe full-stack",
+                "f2": "Pipelines danych i procesy ETL",
+                "f3": "Rozwój API i integracje",
+                "f4": "Automatyzacja procesów biznesowych"
+            },
+            "training": {
+                "title": "Szkolenia i Konsulting",
+                "description": "Wzmacniaj swój zespół wiedzą i najlepszymi praktykami w zakresie analityki danych.",
+                "f1": "Korporacyjne programy szkoleniowe Power BI",
+                "f2": "Warsztaty z analityki danych",
+                "f3": "Konsulting i zarządzanie danymi",
+                "f4": "Mentorstwo i wsparcie"
+            }
+        },
+
+        "projects": {
+            "label": "Portfolio",
+            "subtitle": "Wybrane projekty prezentujące doświadczenie w analityce danych i tworzeniu oprogramowania",
+            "featured": "Wyróżnione",
+            "viewProject": "Zobacz Projekt",
+            "visit": "Odwiedź Stronę",
+            "learnMore": "Dowiedz się Więcej",
+            "more": "Chcesz zobaczyć więcej projektów?",
+            "github": "Zobacz na GitHub"
+        },
+
+        "experience": {
+            "label": "Doświadczenie",
+            "subtitle": "Ścieżka zawodowa obejmująca zarządzanie korporacyjne, inżynierię danych i rozwój oprogramowania",
+            "workTitle": "Doświadczenie Zawodowe",
+            "certsTitle": "Certyfikaty",
+            "work": "Praca",
+            "certificate": "Certyfikat",
+            
+            "haleon": {
+                "role": "Inżynier Systemów End-to-End",
+                "period": "2023 - Obecnie",
+                "description": "Prowadzenie rozwiązań opartych na Azure i implementacji Power BI. Dostarczanie programów szkoleniowych oraz ustanawianie frameworków zarządzania danymi w skali korporacyjnej."
+            },
+            "carlsberg": {
+                "role": "Ekspert ds. Raportowania",
+                "period": "2020 - 2023",
+                "description": "Przewodzenie inicjatywom optymalizacji procesów i budowanie zautomatyzowanych systemów raportowania. Transformacja manualnych procesów w zintegrowane platformy analityczne."
+            },
+            "bostik": {
+                "role": "Menedżer Marketingu",
+                "period": "2016 - 2020",
+                "description": "Zarządzanie międzynarodowymi kampaniami marketingowymi i zespołami międzyfunkcyjnymi. Tworzenie strategii opartych na danych i implementacja analityki CRM."
+            },
+            
+            "fabric": {
+                "title": "Fabric Analytics Engineer Associate"
+            },
+            "scrum": {
+                "title": "Certyfikowany Scrum Master i Product Owner"
+            }
+        },
+
+        "contact": {
+            "label": "Kontakt",
+            "subtitle": "Gotowy na przekształcenie danych w przewagę konkurencyjną? Porozmawiajmy o Twoim projekcie.",
+            "heading": "Stwórzmy Coś Wielkiego Razem",
+            "available": "Dostępny dla nowych projektów",
+            "response": "Zazwyczaj odpowiadam w ciągu 24 godzin",
+            "thankYou": "Dziękuję za kontakt. Odpowiem najszybciej jak to możliwe.",
+            "sendAnother": "Wyślij kolejną wiadomość",
+            "sending": "Wysyłanie...",
+            "error": "Wystąpił błąd podczas wysyłania. Spróbuj ponownie lub skontaktuj się bezpośrednio przez email.",
+            "captchaRequired": "Proszę potwierdzić, że nie jesteś robotem.",
+            "captchaInfo": "Ta strona jest chroniona przez hCaptcha. Privacy Policy | Terms of Service",
+            
+            "subject": "Temat",
+            "selectSubject": "Wybierz temat",
+            "subjects": {
+                "powerbi": "Projekt Power BI",
+                "development": "Rozwój Oprogramowania",
+                "training": "Zapytanie o Szkolenie",
+                "consulting": "Konsulting",
+                "other": "Inne"
+            },
+            "namePlaceholder": "Twoje imię",
+            "emailPlaceholder": "twoj@email.com",
+            "messagePlaceholder": "Opisz swój projekt, cele i termin..."
+        },
         "contactText": "Masz dane, ale brakuje Ci wniosków? Porozmawiajmy o tym, jak mogę pomóc Twojej firmie urosnąć.",
-        "sendMessage": "Wyślij wiadomość",
-        "messageSent": "Wiadomość wysłana!",
+        "sendMessage": "Wyślij Wiadomość",
+        "messageSent": "Wiadomość Wysłana!",
         "name": "Imię",
         "email": "Email",
         "message": "Wiadomość",
-        "nav": {
-            "about": "O mnie",
-            "projects": "Projekty",
-            "contact": "Kontakt"
-        },
-        "projectsList": {
-            "ev_assist": {
-                "title": "EV Assist",
-                "description": "Aplikacja PWA do obliczania zapotrzebowania na ładowanie samochodu elektrycznego na podstawie poziomu baterii i dystansu."
-            },
-            "fairpact": {
-                "title": "FairPact",
-                "description": "Aplikacja internetowa służąca do analizy umów i identyfikacji klauzul niedozwolonych przy użyciu OCR i NLP."
-            }
+
+        "footer": {
+            "description": "Analityk danych, ekspert Power BI i programista pomagający organizacjom podejmować mądrzejsze decyzje dzięki danym.",
+            "location": "Śrem, Polska",
+            "links": "Szybkie Linki",
+            "contact": "Kontakt",
+            "rights": "Wszelkie prawa zastrzeżone.",
+            "madeWith": "Stworzone z"
         }
     }
 }

@@ -1,34 +1,177 @@
 {
     "HomePage": {
         "title": "Rafał Maculewicz",
-        "role": "End-to-End System Engineer | Microsoft Analytics Expert | Scrum Master",
-        "slogan": "Data that speaks the language of your business.",
-        "aboutHeading": "About Me",
+        "role": "Data Analyst • Power BI Expert • Developer",
+        "slogan": "Transforming complex data into strategic business decisions.",
+        
+        "hero": {
+            "greeting": "Hi, I'm",
+            "description": "I help organizations unlock the power of their data through advanced analytics, custom Power BI solutions, and tailored software development. I work with businesses of all sizes – from local companies to international corporations.",
+            "powerbiBadge": "Expert",
+            "azureBadge": "Certified",
+            "ctaPrimary": "Let's Talk",
+            "ctaSecondary": "View Projects",
+            "scroll": "Scroll",
+            "stats": {
+                "years": "Years Experience",
+                "satisfaction": "Client Satisfaction"
+            }
+        },
+
+        "nav": {
+            "about": "About",
+            "services": "Services",
+            "projects": "Projects",
+            "experience": "Experience",
+            "contact": "Contact",
+            "hire": "Contact Me",
+            "language": "Language",
+            "theme": "Theme"
+        },
+
+        "about": {
+            "label": "About Me",
+            "subtitle": "Bridging the gap between technology and business strategy",
+            "heading": "More Than Just Code",
+            "skills": "Core Expertise",
+            "features": {
+                "analytics": {
+                    "title": "Data Analytics",
+                    "description": "Transforming raw data into actionable business insights through advanced analytics and visualization techniques."
+                },
+                "development": {
+                    "title": "Custom Development",
+                    "description": "Building tailored software solutions, web applications, and automation tools to streamline business processes."
+                },
+                "training": {
+                    "title": "Power BI Training",
+                    "description": "Empowering teams with comprehensive Power BI training, from basics to advanced DAX and data modeling."
+                },
+                "consulting": {
+                    "title": "Strategic Consulting",
+                    "description": "Bridging the gap between technology and business strategy to drive data-informed decision making."
+                }
+            }
+        },
         "aboutText1": "I am a specialist who builds bridges between complex technology and real business needs. My career path is a unique blend of the IT world and management – before fully dedicating myself to data analytics, I gained extensive experience as a Marketing Manager at the international corporation, Bostik.",
-        "aboutText2": "This background ensures that when I build Power BI dashboards or design Azure architecture, I don’t just think about the code. I think about how that data will impact your margins, sales efficiency, and decision-making speed. I help companies stop \"guessing\" and start acting based on facts.",
-        "projectsHeading": "How can I help your company?",
-        "coursesHeading": "Experience & Certifications",
-        "contactHeading": "Contact",
-        "contactText": "You have the data, but do you have the insights? Let’s talk about how I can help your business grow.",
+        "aboutText2": "This background ensures that when I build Power BI dashboards or design Azure architecture, I don't just think about the code. I think about how that data will impact your margins, sales efficiency, and decision-making speed. I help companies stop 'guessing' and start acting based on facts.",
+
+        "services": {
+            "label": "Services",
+            "subtitle": "Comprehensive data and development solutions tailored to your business needs",
+            "popular": "Most Popular",
+            "cta": "Get in touch",
+            "trusted": "Trusted by industry leaders",
+            
+            "powerbi": {
+                "title": "Power BI Solutions",
+                "description": "End-to-end business intelligence solutions that transform raw data into actionable insights.",
+                "f1": "Custom dashboard design and development",
+                "f2": "Advanced DAX calculations and data modeling",
+                "f3": "Enterprise-scale report deployment",
+                "f4": "Performance optimization and governance"
+            },
+            "development": {
+                "title": "Custom Development",
+                "description": "Tailored software solutions built with modern technologies to solve your unique challenges.",
+                "f1": "Full-stack web applications",
+                "f2": "Data pipelines and ETL processes",
+                "f3": "API development and integration",
+                "f4": "Process automation solutions"
+            },
+            "training": {
+                "title": "Training & Consulting",
+                "description": "Empower your team with knowledge and best practices in data analytics and BI tools.",
+                "f1": "Corporate Power BI training programs",
+                "f2": "Data literacy workshops",
+                "f3": "Best practices and governance consulting",
+                "f4": "Ongoing mentorship and support"
+            }
+        },
+
+        "projects": {
+            "label": "Portfolio",
+            "subtitle": "Selected projects showcasing expertise in data analytics and software development",
+            "featured": "Featured",
+            "viewProject": "View Project",
+            "visit": "Visit Website",
+            "learnMore": "Learn More",
+            "more": "Want to see more of my work?",
+            "github": "View on GitHub"
+        },
+
+        "experience": {
+            "label": "Experience",
+            "subtitle": "Professional journey spanning corporate leadership, data engineering, and software development",
+            "workTitle": "Work Experience",
+            "certsTitle": "Certifications",
+            "work": "Work",
+            "certificate": "Certificate",
+            
+            "haleon": {
+                "role": "End-to-End System Engineer",
+                "period": "2023 - Present",
+                "description": "Leading Azure-based data solutions and Power BI implementations. Delivering comprehensive training programs and establishing data governance frameworks for enterprise-scale analytics."
+            },
+            "carlsberg": {
+                "role": "Senior Reporting Expert",
+                "period": "2020 - 2023",
+                "description": "Spearheaded process optimization initiatives and built automated reporting systems. Transformed manual reporting workflows into streamlined, self-service analytics platforms."
+            },
+            "bostik": {
+                "role": "Marketing Manager",
+                "period": "2016 - 2020",
+                "description": "Managed international marketing campaigns and cross-functional teams. Developed data-driven marketing strategies and implemented CRM analytics for performance tracking."
+            },
+            
+            "fabric": {
+                "title": "Fabric Analytics Engineer Associate"
+            },
+            "scrum": {
+                "title": "Certified Scrum Master & Product Owner"
+            }
+        },
+
+        "contact": {
+            "label": "Contact",
+            "subtitle": "Ready to transform your data into competitive advantage? Let's discuss your project.",
+            "heading": "Let's Build Something Great Together",
+            "available": "Available for new projects",
+            "response": "Typically respond within 24 hours",
+            "thankYou": "Thank you for reaching out. I'll get back to you shortly.",
+            "sendAnother": "Send another message",
+            "sending": "Sending...",
+            "error": "An error occurred while sending. Please try again or contact me directly via email.",
+            "captchaRequired": "Please verify that you are not a robot.",
+            "captchaInfo": "This site is protected by hCaptcha. Privacy Policy | Terms of Service",
+            
+            "subject": "Subject",
+            "selectSubject": "Select a subject",
+            "subjects": {
+                "powerbi": "Power BI Project",
+                "development": "Custom Development",
+                "training": "Training Request",
+                "consulting": "Consulting",
+                "other": "Other"
+            },
+            "namePlaceholder": "Your name",
+            "emailPlaceholder": "your@email.com",
+            "messagePlaceholder": "Tell me about your project, goals, and timeline..."
+        },
+        "contactText": "You have the data, but do you have the insights? Let's talk about how I can help your business grow.",
         "sendMessage": "Send Message",
         "messageSent": "Message Sent!",
         "name": "Name",
         "email": "Email",
         "message": "Message",
-        "nav": {
-            "about": "About Me",
-            "projects": "Projects",
-            "contact": "Contact"
-        },
-        "projectsList": {
-            "ev_assist": {
-                "title": "EV Assist",
-                "description": "A PWA application for calculating electric vehicle charging needs based on current battery level and distance to destination."
-            },
-            "fairpact": {
-                "title": "FairPact",
-                "description": "A web application designed to analyze contracts and identify prohibited clauses using OCR and NLP."
-            }
+
+        "footer": {
+            "description": "Data Analyst, Power BI Expert, and Developer helping organizations make smarter decisions through data.",
+            "location": "Śrem, Poland",
+            "links": "Quick Links",
+            "contact": "Contact Info",
+            "rights": "All rights reserved.",
+            "madeWith": "Made with"
         }
     }
 }

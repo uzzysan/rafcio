@@ -6,11 +6,23 @@ import { ThemeProvider } from '@/components/theme-provider';
 import { Navbar } from '@/components/Navbar';
 import "../globals.css";
 
-const inter = Inter({ subsets: ['latin'] });
+const inter = Inter({ 
+    subsets: ['latin'],
+    display: 'swap',
+    variable: '--font-inter'
+});
 
 export const metadata: Metadata = {
-    title: 'Rafał Maculewicz - Personal Website',
-    description: 'Software Engineer, Developer, Creator.',
+    title: 'Rafał Maculewicz | Data Analyst & Power BI Expert',
+    description: 'Professional data analyst, Power BI expert, and full-stack developer helping organizations transform data into strategic decisions.',
+    keywords: ['Data Analyst', 'Power BI', 'Business Intelligence', 'Azure', 'Data Engineering', 'Full-Stack Developer', 'Warsaw', 'Poland'],
+    authors: [{ name: 'Rafał Maculewicz' }],
+    openGraph: {
+        title: 'Rafał Maculewicz | Data Analyst & Power BI Expert',
+        description: 'Transforming complex data into strategic business decisions.',
+        type: 'website',
+        locale: 'en_US',
+    },
 };
 
 export default async function LocaleLayout({
@@ -21,22 +33,20 @@ export default async function LocaleLayout({
     params: Promise<{ locale: string }>;
 }) {
     const { locale } = await params;
-    // Providing all messages to the client
-    // side is the easiest way to get started
     const messages = await getMessages();
 
     return (
-        <html lang={locale} suppressHydrationWarning>
-            <body className={inter.className}>
+        <html lang={locale} suppressHydrationWarning className={inter.variable}>
+            <body className={`${inter.className} antialiased`}>
                 <NextIntlClientProvider messages={messages}>
                     <ThemeProvider
                         attribute="class"
                         defaultTheme="system"
                         enableSystem
-                        disableTransitionOnChange
+                        disableTransitionOnChange={false}
                     >
                         <Navbar />
-                        <main className="min-h-screen pt-16">
+                        <main className="min-h-screen">
                             {children}
                         </main>
                     </ThemeProvider>

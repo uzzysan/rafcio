@@ -3,6 +3,7 @@
 import { useLocale } from 'next-intl';
 import { useRouter, usePathname } from '@/i18n/routing';
 import { clsx } from 'clsx';
+import { motion } from 'framer-motion';
 
 export function LangSwitcher() {
     const locale = useLocale();
@@ -14,25 +15,42 @@ export function LangSwitcher() {
     };
 
     return (
-        <div className="flex gap-2 text-sm font-medium">
+        <div className="flex items-center gap-1 p-1 rounded-full bg-[var(--muted)]">
             <button
                 onClick={() => switchLocale('pl')}
                 className={clsx(
-                    "transition-colors",
-                    locale === 'pl' ? "text-orange-500" : "text-gray-500 hover:text-gray-900 dark:hover:text-gray-300"
+                    "relative px-3 py-1.5 text-sm font-medium rounded-full transition-all duration-300",
+                    locale === 'pl' 
+                        ? "text-white" 
+                        : "text-[var(--muted-foreground)] hover:text-[var(--foreground)]"
                 )}
             >
-                PL
+                {locale === 'pl' && (
+                    <motion.div
+                        layoutId="langIndicator"
+                        className="absolute inset-0 bg-[var(--accent)] rounded-full"
+                        transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
+                    />
+                )}
+                <span className="relative z-10">PL</span>
             </button>
-            <span className="text-gray-300 dark:text-gray-700">|</span>
             <button
                 onClick={() => switchLocale('en')}
                 className={clsx(
-                    "transition-colors",
-                    locale === 'en' ? "text-orange-500" : "text-gray-500 hover:text-gray-900 dark:hover:text-gray-300"
+                    "relative px-3 py-1.5 text-sm font-medium rounded-full transition-all duration-300",
+                    locale === 'en' 
+                        ? "text-white" 
+                        : "text-[var(--muted-foreground)] hover:text-[var(--foreground)]"
                 )}
             >
-                EN
+                {locale === 'en' && (
+                    <motion.div
+                        layoutId="langIndicator"
+                        className="absolute inset-0 bg-[var(--accent)] rounded-full"
+                        transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
+                    />
+                )}
+                <span className="relative z-10">EN</span>
             </button>
         </div>
     );
