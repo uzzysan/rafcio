@@ -1,5 +1,10 @@
 {
     "HomePage": {
+        "seo": {
+            "title": "Rafał Maculewicz | Data Analyst & Power BI Expert",
+            "description": "Professional data analyst, Power BI expert, and full-stack developer helping organizations transform data into strategic decisions.",
+            "keywords": "Data Analyst, Power BI, Business Intelligence, Azure, Data Engineering, Full-Stack Developer, Warsaw, Poland"
+        },
         "title": "Rafał Maculewicz",
         "role": "Data Analyst • Power BI Expert • Developer",
         "slogan": "Transforming complex data into strategic business decisions.",

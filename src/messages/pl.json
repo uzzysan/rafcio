@@ -1,5 +1,10 @@
 {
     "HomePage": {
+        "seo": {
+            "title": "Rafał Maculewicz | Analityk Danych i Ekspert Power BI",
+            "description": "Profesjonalny analityk danych, ekspert Power BI i programista full-stack pomagający organizacjom przekształcać dane w strategiczne decyzje.",
+            "keywords": "Analityk Danych, Power BI, Business Intelligence, Azure, Inżynieria Danych, Programista Full-Stack, Śrem, Polska"
+        },
         "title": "Rafał Maculewicz",
         "role": "Analityk Danych • Ekspert Power BI • Programista",
         "slogan": "Przekształcam złożone dane w strategiczne decyzje biznesowe.",
