@@ -18,13 +18,14 @@ interface ExperienceItem {
     period: string;
     description?: string;
     skills?: string[];
+    badge?: string;
 }
 
 const experiences: ExperienceItem[] = [
     {
         id: 'haleon',
         type: 'work',
-        organization: 'Haleon',
+        organization: 'Haleon (dawniej GSK Consumer Healthcare)',
         role: 'experience.haleon.role',
         period: 'experience.haleon.period',
         description: 'experience.haleon.description',
@@ -40,13 +41,22 @@ const experiences: ExperienceItem[] = [
         skills: ['Reporting', 'Process Optimization', 'Data Analytics']
     },
     {
+        id: 'teb',
+        type: 'work',
+        organization: 'TEB Akademia',
+        role: 'experience.teb.role',
+        period: 'experience.teb.period',
+        description: 'experience.teb.description',
+        skills: ['Power BI', 'Data Analysis', 'Reporting', 'Data Presentation']
+    },
+    {
         id: 'bostik',
         type: 'work',
         organization: 'Bostik (Arkema)',
         role: 'experience.bostik.role',
         period: 'experience.bostik.period',
         description: 'experience.bostik.description',
-        skills: ['Marketing', 'Project Management', 'International Business']
+        skills: ['Marketing', 'Project Management', 'Market Positioning']
     }
 ];
 
@@ -57,15 +67,48 @@ const certifications: ExperienceItem[] = [
         organization: 'Microsoft',
         role: 'experience.fabric.title',
         period: '2024',
-        skills: ['Microsoft Fabric', 'Power BI', 'Data Engineering']
+        skills: ['Microsoft Fabric', 'Power BI', 'Data Engineering'],
+        badge: '/images/microsoft-certified-associate-badge.svg'
     },
     {
         id: 'scrum',
         type: 'certificate',
         organization: 'Scrum Inc.',
         role: 'experience.scrum.title',
-        period: '2023',
+        period: '2018',
         skills: ['Agile', 'Scrum', 'Project Management']
+    },
+    {
+        id: 'powerbi',
+        type: 'certificate',
+        organization: 'Udemy',
+        role: 'experience.powerbi.title',
+        period: '2018',
+        skills: ['Power BI', 'Data Visualization', 'DAX']
+    },
+    {
+        id: 'dax',
+        type: 'certificate',
+        organization: 'SQLBI',
+        role: 'experience.dax.title',
+        period: '2021',
+        skills: ['DAX', 'Power BI', 'Data Modeling']
+    },
+    {
+        id: 'ssas',
+        type: 'certificate',
+        organization: 'Udemy',
+        role: 'experience.ssas.title',
+        period: '2021',
+        skills: ['SSAS', 'Tabular Model', 'Data Modeling']
+    },
+    {
+        id: 'datawarehouse',
+        type: 'certificate',
+        organization: 'LinkedIn Learning',
+        role: 'experience.datawarehouse.title',
+        period: '2020',
+        skills: ['SQL Server', 'Data Warehouse', 'ETL']
     }
 ];
 
@@ -198,7 +241,7 @@ export function Experience() {
                         {t('experience.certsTitle')}
                     </motion.h3>
 
-                    <div className="grid sm:grid-cols-2 gap-4">
+                    <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
                         {certifications.map((cert, index) => (
                             <motion.div
                                 key={cert.id}
@@ -221,6 +264,17 @@ export function Experience() {
                                 <p className="text-[var(--accent-secondary)] font-medium mb-3">
                                     {t(cert.role)}
                                 </p>
+
+                                {/* Microsoft Badge */}
+                                {cert.badge && (
+                                    <div className="mb-4">
+                                        <img 
+                                            src={cert.badge} 
+                                            alt="Microsoft Certified Badge" 
+                                            className="h-16 w-auto object-contain"
+                                        />
+                                    </div>
+                                )}
 
                                 <div className="flex flex-wrap gap-2">
                                     {cert.skills?.map((skill) => (
