@@ -128,7 +128,7 @@ export default async function Image({ params }: { params: Promise<{ locale: stri
             fontSize: '20px',
           }}
         >
-          rafalmaculewicz.pl
+          maculewicz.pro
         </div>
       </div>
     ),

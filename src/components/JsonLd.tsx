@@ -8,7 +8,7 @@ export async function JsonLd({ locale }: { locale: string }) {
         "@type": "Person",
         "name": "Rafał Maculewicz",
         "jobTitle": "Data Analyst & Power BI Expert",
-        "url": "https://rafalmaculewicz.pl",
+        "url": "https://maculewicz.pro",
         "sameAs": [
             "https://www.linkedin.com/in/rafalmaculewicz/",
             "https://github.com/uzzysan"
@@ -28,8 +28,8 @@ export async function JsonLd({ locale }: { locale: string }) {
         "@context": "https://schema.org",
         "@type": "ProfessionalService",
         "name": "Rafał Maculewicz - Data & BI Solutions",
-        "image": "https://rafalmaculewicz.pl/bright_bg.jpg",
-        "url": "https://rafalmaculewicz.pl",
+        "image": "https://maculewicz.pro/bright_bg.jpg",
+        "url": "https://maculewicz.pro",
         "address": {
             "@type": "PostalAddress",
             "addressLocality": "Śrem",

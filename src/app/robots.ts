@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
             allow: '/',
             disallow: '/private/',
         },
-        sitemap: 'https://rafalmaculewicz.pl/sitemap.xml',
+        sitemap: 'https://maculewicz.pro/sitemap.xml',
     };
 }

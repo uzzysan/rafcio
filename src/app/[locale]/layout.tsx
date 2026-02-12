@@ -16,7 +16,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     const { locale } = await params;
     const t = await getTranslations({ locale, namespace: 'HomePage.seo' });
 
-    const baseUrl = 'https://rafalmaculewicz.pl'; // Replace with actual production URL
+    const baseUrl = 'https://maculewicz.pro'; // Replace with actual production URL
 
     return {
         title: t('title'),
