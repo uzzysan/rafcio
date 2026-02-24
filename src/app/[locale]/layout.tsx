@@ -4,6 +4,7 @@ import { getMessages, getTranslations } from 'next-intl/server';
 import { ThemeProvider } from '@/components/theme-provider';
 import { Navbar } from '@/components/Navbar';
 import { JsonLd } from '@/components/JsonLd';
+import { Analytics } from '@/components/Analytics';
 import "../globals.css";
 
 const inter = Inter({ 
@@ -16,9 +17,10 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     const { locale } = await params;
     const t = await getTranslations({ locale, namespace: 'HomePage.seo' });
 
-    const baseUrl = 'https://maculewicz.pro'; // Replace with actual production URL
+    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://maculewicz.pro';
 
     return {
+        metadataBase: new URL(baseUrl),
         title: t('title'),
         description: t('description'),
         keywords: t('keywords').split(', '),
@@ -67,6 +69,7 @@ export default async function LocaleLayout({
     return (
         <html lang={locale} suppressHydrationWarning className={inter.variable}>
             <body className={`${inter.className} antialiased`}>
+                <Analytics />
                 <JsonLd locale={locale} />
                 <NextIntlClientProvider messages={messages}>
                     <ThemeProvider

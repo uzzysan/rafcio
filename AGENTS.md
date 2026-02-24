@@ -18,6 +18,65 @@ npm run start    # Start production server
 node scripts/process-images.js  # Optimize hero images with sharp
 ```
 
+## Analytics (Umami)
+
+Self-hosted analytics running on VPS alongside the main application.
+
+### Setup on VPS
+
+1. **Copy docker-compose file:**
+   ```bash
+   scp docker-compose.umami.yml user@vps:/opt/umami/
+   ```
+
+2. **Start Umami:**
+   ```bash
+   cd /opt/umami
+   docker compose -f docker-compose.umami.yml up -d
+   ```
+
+3. **Configure Nginx reverse proxy** (add to your site config):
+   ```nginx
+   location /umami/ {
+       proxy_pass http://localhost:3001/;
+       proxy_set_header Host $host;
+       proxy_set_header X-Real-IP $remote_addr;
+   }
+   ```
+
+4. **Initial setup:**
+   - Go to `https://maculewicz.pro/umami/`
+   - Login: `admin` / `umami`
+   - **Change password immediately!**
+   - Add your website and copy the Website ID
+
+5. **Update environment variables** in `.env`:
+   ```
+   NEXT_PUBLIC_UMAMI_SCRIPT_URL=https://maculewicz.pro/umami.js
+   NEXT_PUBLIC_UMAMI_WEBSITE_ID=your-copied-website-id
+   ```
+
+### Analytics Features
+
+- **Page views** - automatycznie śledzone
+- **Unique visitors** - nowi vs powracający
+- **Events** - kliknięcia w linki, przyciski
+- **Referrers** - skąd przychodzą użytkownicy
+- **Devices/Browsers/Countries** - dane techniczne
+
+### Custom Events (opcjonalne)
+
+Aby śledzić kliknięcia w konkretne elementy, dodaj atrybut `data-umami-event`:
+
+```tsx
+<a 
+  href="https://github.com/uzzysan" 
+  data-umami-event="github-click"
+>
+  GitHub
+</a>
+```
+
 ## Architecture
 
 ### Internationalization (next-intl)
