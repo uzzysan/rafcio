@@ -40,6 +40,11 @@ jobs:
           tar -xzf deploy.tar.gz
           rm deploy.tar.gz
           
+          # Inject environment variables for the Next.js build
+          echo "NEXT_PUBLIC_UMAMI_WEBSITE_ID=${{ vars.NEXT_PUBLIC_UMAMI_WEBSITE_ID }}" >> .env.production
+          echo "NEXT_PUBLIC_UMAMI_SCRIPT_URL=${{ vars.NEXT_PUBLIC_UMAMI_SCRIPT_URL }}" >> .env.production
+          echo "NEXT_PUBLIC_BASE_URL=${{ vars.NEXT_PUBLIC_BASE_URL || 'https://maculewicz.pro' }}" >> .env.production
+          
           # Build the Docker image
           sudo docker build -t rafcio:latest .
           
