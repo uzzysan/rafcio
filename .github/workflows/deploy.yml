@@ -32,7 +32,7 @@ jobs:
         username: ${{ secrets.SSH_USER }}
         key: ${{ secrets.SSH_PRIVATE_KEY }}
         port: ${{ secrets.SSH_PORT || 22 }}
-        source: ".next,public,package*.json,next.config.ts,tsconfig.json,src,.env.production"
+        source: ".next,public,package*.json,next.config.ts,tsconfig.json,src,.env.production,Dockerfile"
         target: ${{ secrets.DEPLOY_PATH }}
         rm: true  # Remove existing files before upload
         
