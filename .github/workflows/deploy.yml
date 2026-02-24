@@ -46,18 +46,11 @@ jobs:
         script: |
           cd ${{ secrets.DEPLOY_PATH }}
           
-          # Install production dependencies
-          npm ci --production --legacy-peer-deps
+          # Build the Docker image
+          sudo docker build -t rafcio:latest .
           
-          # Install PM2 globally if not present (or use existing process manager)
-          if ! command -v pm2 &> /dev/null; then
-            sudo npm install -g pm2
-          fi
+          # Restart the specific container in the fairpact setup
+          cd /opt/fairpact
+          sudo docker compose -f docker-compose.prod.yml up -d rafcio
           
-          # Restart or start the application
-          pm2 restart rafcio-portfolio || pm2 start npm --name "rafcio-portfolio" -- start
-          
-          # Save PM2 config
-          pm2 save
-          
-          echo "✅ Deployment completed successfully!"
+          echo "✅ Docker deployment completed successfully!"
