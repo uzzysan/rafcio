@@ -24,10 +24,6 @@ jobs:
       
     - name: Build application
       run: npm run build
-      env:
-        NEXT_PUBLIC_BASE_URL: ${{ vars.NEXT_PUBLIC_BASE_URL || 'https://maculewicz.pro' }}
-        NEXT_PUBLIC_UMAMI_SCRIPT_URL: ${{ vars.NEXT_PUBLIC_UMAMI_SCRIPT_URL }}
-        NEXT_PUBLIC_UMAMI_WEBSITE_ID: ${{ vars.NEXT_PUBLIC_UMAMI_WEBSITE_ID }}
         
     - name: Deploy to VPS
       uses: appleboy/scp-action@v0.1.7
