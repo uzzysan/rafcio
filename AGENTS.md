@@ -18,6 +18,18 @@ npm run start    # Start production server
 node scripts/process-images.js  # Optimize hero images with sharp
 ```
 
+## Deployment
+
+Automatyczny deploy przez GitHub Actions na VPS przy pushu do `main`.
+
+**Konfiguracja:** Zobacz `DEPLOY.md` - wymagane ustawienie secrets w GitHub.
+
+**Secrets do skonfigurowania:**
+- `SSH_HOST`, `SSH_USER`, `SSH_PRIVATE_KEY`, `DEPLOY_PATH`
+
+**Variables (opcjonalne):**
+- `NEXT_PUBLIC_BASE_URL`, `NEXT_PUBLIC_UMAMI_*`
+
 ## Analytics (Umami)
 
 Self-hosted analytics running on VPS alongside the main application.
