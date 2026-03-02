@@ -49,21 +49,8 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-        
-      - name: Compress source code
-        run: tar -czf deploy.tar.gz src public package*.json next.config.ts tsconfig.json .env.production Dockerfile
-          
+
       - name: Deploy to VPS
-        uses: appleboy/scp-action@v0.1.7
-        with:
-          host: ${{ secrets.SSH_HOST }}
-          username: ${{ secrets.SSH_USER }}
-          key: ${{ secrets.SSH_PRIVATE_KEY }}
-          port: ${{ secrets.SSH_PORT || 22 }}
-          source: "deploy.tar.gz"
-          target: ${{ secrets.DEPLOY_PATH }}
-          
-      - name: Execute remote commands
         uses: appleboy/ssh-action@v1.0.3
         with:
           host: ${{ secrets.SSH_HOST }}
@@ -71,22 +58,33 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           port: ${{ secrets.SSH_PORT || 22 }}
           script: |
-            cd ${{ secrets.DEPLOY_PATH }}
-            
-            # Extract the source code
-            tar -xzf deploy.tar.gz
-            rm deploy.tar.gz
+            cd /opt/rafcio
+            git fetch origin
+            git checkout main
+            git pull origin main
             
             # Inject environment variables for the Next.js build
-            echo "NEXT_PUBLIC_UMAMI_WEBSITE_ID=${{ vars.NEXT_PUBLIC_UMAMI_WEBSITE_ID }}" >> .env.production
+            echo "NEXT_PUBLIC_UMAMI_WEBSITE_ID=${{ vars.NEXT_PUBLIC_UMAMI_WEBSITE_ID }}" > .env.production
             echo "NEXT_PUBLIC_UMAMI_SCRIPT_URL=${{ vars.NEXT_PUBLIC_UMAMI_SCRIPT_URL }}" >> .env.production
             echo "NEXT_PUBLIC_BASE_URL=${{ vars.NEXT_PUBLIC_BASE_URL || 'https://maculewicz.pro' }}" >> .env.production
             
             # Build the Docker image
             sudo docker build -t rafcio:latest .
             
-            # Restart the specific container in the fairpact setup
-            cd /opt/fairpact
-            sudo docker compose -f docker-compose.prod.yml up -d rafcio
+            # Restart the container
+            sudo docker stop rafcio || true
+            sudo docker rm rafcio || true
+            sudo docker run -d --name rafcio --restart unless-stopped -p 3002:3000 --network fairpact_fairpact-network rafcio:latest
             
-            echo "✅ Rafcio deployment completed successfully!"
+            echo "✅ Rafcio deployment completed!"
+
+      - name: Verify deployment
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          port: ${{ secrets.SSH_PORT || 22 }}
+          script: |
+            docker ps | grep rafcio
+            echo "✅ Rafcio deployment verified!"
