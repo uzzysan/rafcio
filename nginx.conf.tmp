@@ -1,0 +1,300 @@
+events {
+    worker_connections 1024;
+}
+
+http {
+    include       mime.types;
+    default_type  application/octet-stream;
+    
+    # Logging with response time
+    log_format main_timed '$remote_addr - $remote_user [$time_local] '
+                          '"$request" $status $body_bytes_sent '
+                          '"$http_referer" "$http_user_agent" '
+                          'rt=$request_time uct="$upstream_connect_time" '
+                          'uht="$upstream_header_time" urt="$upstream_response_time"';
+    
+    access_log /var/log/nginx/access.log main_timed;
+    error_log /var/log/nginx/error.log warn;
+    
+    # Optimization
+    sendfile        on;
+    keepalive_timeout  65;
+    
+    # Gzip Compression
+    gzip on;
+    gzip_types text/plain text/css application/json application/javascript text/xml application/xml application/xml+rss text/javascript;
+    
+    # Rate Limiting
+    limit_req_zone $binary_remote_addr zone=api_limit:10m rate=60r/m;
+    limit_req_zone $binary_remote_addr zone=upload_limit:10m rate=10r/m;
+
+    # Upstreams
+    upstream backend_server {
+        server backend-1:8000;
+    }
+
+    upstream frontend_server {
+        server frontend:3000;
+    }
+
+    upstream rafcio_server {
+        server rafcio:3000;
+    }
+
+    # Nginx status for prometheus exporter
+    server {
+        listen 8080;
+        server_name localhost;
+        
+        location /nginx_status {
+            stub_status on;
+            access_log off;
+            allow 127.0.0.1;
+            allow 172.16.0.0/12;  # Allow Docker network
+            deny all;
+        }
+    }
+
+    # ========================================
+    # FAIRPACT.PL
+    # ========================================
+
+    # Redirect HTTP to HTTPS
+    server {
+        listen 80;
+        server_name fairpact.pl www.fairpact.pl;
+        
+        location / {
+            return 301 https://fairpact.pl$request_uri;
+        }
+    }
+
+    # Redirect www to non-www
+    server {
+        listen 443 ssl http2;
+        server_name www.fairpact.pl;
+
+        ssl_certificate /etc/letsencrypt/live/fairpact.pl/fullchain.pem;
+        ssl_certificate_key /etc/letsencrypt/live/fairpact.pl/privkey.pem;
+
+        return 301 https://fairpact.pl$request_uri;
+    }
+
+    # Grafana HTTPS Server
+    server {
+        listen 443 ssl http2;
+        server_name grafana.fairpact.pl;
+
+        # SSL Configuration
+        ssl_certificate /etc/letsencrypt/live/grafana.fairpact.pl/fullchain.pem;
+        ssl_certificate_key /etc/letsencrypt/live/grafana.fairpact.pl/privkey.pem;
+        ssl_protocols TLSv1.2 TLSv1.3;
+        ssl_prefer_server_ciphers on;
+        
+        # Security Headers
+        add_header Strict-Transport-Security "max-age=31536000; includeSubDomains" always;
+        add_header X-Frame-Options "SAMEORIGIN";
+        add_header X-Content-Type-Options "nosniff";
+
+        # Grafana proxy
+        location / {
+            proxy_pass http://grafana:3000;
+            proxy_http_version 1.1;
+            proxy_set_header Upgrade $http_upgrade;
+            proxy_set_header Connection 'upgrade';
+            proxy_set_header Host $host;
+            proxy_set_header X-Real-IP $remote_addr;
+            proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+            proxy_set_header X-Forwarded-Proto $scheme;
+            proxy_cache_bypass $http_upgrade;
+        }
+    }
+
+    # Main HTTPS Server
+    server {
+        listen 443 ssl http2;
+        server_name fairpact.pl;
+
+        # SSL Configuration
+        ssl_certificate /etc/letsencrypt/live/fairpact.pl/fullchain.pem;
+        ssl_certificate_key /etc/letsencrypt/live/fairpact.pl/privkey.pem;
+        ssl_protocols TLSv1.2 TLSv1.3;
+        ssl_prefer_server_ciphers on;
+        
+        # Security Headers
+        add_header Strict-Transport-Security "max-age=31536000; includeSubDomains" always;
+        add_header X-Frame-Options "SAMEORIGIN";
+        add_header X-Content-Type-Options "nosniff";
+        add_header Referrer-Policy "strict-origin-when-cross-origin";
+
+        # Client Body Size (for PDF uploads)
+        client_max_body_size 50M;
+
+        # Frontend
+        location / {
+            proxy_pass http://frontend_server;
+            proxy_http_version 1.1;
+            proxy_set_header Upgrade $http_upgrade;
+            proxy_set_header Connection 'upgrade';
+            proxy_set_header Host $host;
+            proxy_cache_bypass $http_upgrade;
+        }
+
+        # API
+        location /api/ {
+            limit_req zone=api_limit burst=10 nodelay;
+            proxy_pass http://backend_server;
+            proxy_http_version 1.1;
+            proxy_set_header Connection "";
+            proxy_set_header Host $host;
+            proxy_set_header X-Real-IP $remote_addr;
+            proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+            proxy_set_header X-Forwarded-Proto $scheme;
+        }
+
+        # Document Upload (Extended Timeout)
+        location /api/v1/documents/upload {
+            limit_req zone=upload_limit burst=5 nodelay;
+            proxy_pass http://backend_server;
+            proxy_http_version 1.1;
+            proxy_set_header Connection "";
+            proxy_read_timeout 300s;
+            proxy_connect_timeout 300s;
+            proxy_set_header Host $host;
+            proxy_set_header X-Real-IP $remote_addr;
+            proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+            proxy_set_header X-Forwarded-Proto $scheme;
+        }
+
+        # Health Check
+        location /health {
+            access_log off;
+            proxy_pass http://backend_server/health/live;
+            proxy_set_header Host $host;
+            proxy_set_header X-Real-IP $remote_addr;
+        }
+    }
+
+    # ========================================
+    # MACULEWICZ.PRO
+
+    # ========================================
+    # RAF CIO / MACULEWICZ.PRO
+    # ========================================
+
+    # Redirect HTTP to HTTPS
+    server {
+        listen 80;
+        server_name maculewicz.pro;
+        
+        location / {
+            return 301 https://maculewicz.pro$request_uri;
+        }
+    }
+
+    # Main homepage - proxy to rafcio container
+    server {
+        listen 443 ssl http2;
+        server_name maculewicz.pro;
+
+        # SSL Configuration
+        ssl_certificate /etc/letsencrypt/live/maculewicz.pro/fullchain.pem;
+        ssl_certificate_key /etc/letsencrypt/live/maculewicz.pro/privkey.pem;
+        ssl_protocols TLSv1.2 TLSv1.3;
+        ssl_prefer_server_ciphers on;
+        
+        # Security Headers
+        add_header Strict-Transport-Security "max-age=31536000; includeSubDomains" always;
+        add_header X-Frame-Options "SAMEORIGIN";
+        add_header X-Content-Type-Options "nosniff";
+
+        location / {
+            proxy_pass http://rafcio_server;
+            proxy_http_version 1.1;
+            proxy_set_header Host $host;
+            proxy_set_header X-Real-IP $remote_addr;
+            proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+            proxy_set_header X-Forwarded-Proto $scheme;
+            proxy_set_header Upgrade $http_upgrade;
+            proxy_set_header Connection "upgrade";
+        }
+
+    }
+
+    # ========================================
+    # UMAMI ANALYTICS
+    # ========================================
+
+    # Redirect HTTP to HTTPS
+    server {
+        listen 80;
+        server_name umami.maculewicz.pro;
+        
+        location / {
+            return 301 https://umami.maculewicz.pro$request_uri;
+        }
+    }
+
+    # Umami HTTPS Server
+    server {
+        listen 443 ssl http2;
+        server_name umami.maculewicz.pro;
+
+        # SSL Configuration
+        ssl_certificate /etc/letsencrypt/live/umami.maculewicz.pro/fullchain.pem;
+        ssl_certificate_key /etc/letsencrypt/live/umami.maculewicz.pro/privkey.pem;
+        ssl_protocols TLSv1.2 TLSv1.3;
+        ssl_prefer_server_ciphers on;
+        
+        # Security Headers
+        add_header Strict-Transport-Security "max-age=31536000; includeSubDomains" always;
+        add_header X-Frame-Options "SAMEORIGIN";
+        add_header X-Content-Type-Options "nosniff";
+
+        location / {
+            proxy_pass http://147.135.211.101:3003;
+            proxy_set_header Host $host;
+            proxy_set_header X-Real-IP $remote_addr;
+            proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+            proxy_set_header X-Forwarded-Proto $scheme;
+        }
+    }
+
+    # ========================================
+    # EV ASSIST
+    # ========================================
+
+    # Redirect HTTP to HTTPS
+    server {
+        listen 80;
+        server_name ev-assist.maculewicz.pro;
+        
+        location / {
+            return 301 https://ev-assist.maculewicz.pro$request_uri;
+        }
+    }
+
+    # EV Assist HTTPS
+    server {
+        listen 443 ssl http2;
+        server_name ev-assist.maculewicz.pro;
+
+        # SSL Configuration
+        ssl_certificate /etc/letsencrypt/live/ev-assist.maculewicz.pro/fullchain.pem;
+        ssl_certificate_key /etc/letsencrypt/live/ev-assist.maculewicz.pro/privkey.pem;
+        ssl_protocols TLSv1.2 TLSv1.3;
+        ssl_prefer_server_ciphers on;
+        
+        # Security Headers
+        add_header Strict-Transport-Security "max-age=31536000; includeSubDomains" always;
+        add_header X-Frame-Options "SAMEORIGIN";
+        add_header X-Content-Type-Options "nosniff";
+
+        root /opt/ev_assist/dist;
+        index index.html;
+
+        location / {
+            try_files $uri $uri/ /index.html;
+        }
+    }
+}

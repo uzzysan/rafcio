@@ -36,7 +36,7 @@ export function Footer() {
 
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Main footer content */}
-                <div className="py-16 grid md:grid-cols-2 lg:grid-cols-4 gap-12">
+                <div className="py-16 grid md:grid-cols-2 lg:grid-cols-5 gap-12">
                     {/* Brand */}
                     <div className="lg:col-span-2">
                         <Link href="/" className="inline-flex items-center gap-2 mb-4">
@@ -102,6 +102,24 @@ export function Footer() {
                                 </a>
                             </li>
                         </ul>
+                    </div>
+
+                    {/* Support */}
+                    <div>
+                        <h4 className="font-semibold text-[var(--foreground)] mb-4">{t('footer.support') || 'Wesprzyj'}</h4>
+                        <a
+                            href="https://suppi.pl/rafcio"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-block"
+                        >
+                            <img
+                                width="165"
+                                src="https://suppi.pl/api/widget/button.svg?fill=6457FF&textColor=ffffff"
+                                alt="Wesprzyj mnie"
+                                className="rounded-lg"
+                            />
+                        </a>
                     </div>
                 </div>
 
