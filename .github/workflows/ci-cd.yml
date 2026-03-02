@@ -74,9 +74,20 @@ jobs:
             # Restart the container
             sudo docker stop rafcio || true
             sudo docker rm rafcio || true
-            sudo docker run -d --name rafcio --restart unless-stopped -p 3002:3000 --network fairpact_fairpact-network rafcio:latest
+            sudo docker run -d --name rafcio --restart unless-stopped -p 127.0.0.1:3002:3000 --network fairpact_fairpact-network rafcio:latest
             
             echo "✅ Rafcio deployment completed!"
+
+      - name: Reload host nginx
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          port: ${{ secrets.SSH_PORT || 22 }}
+          script: |
+            sudo nginx -t && sudo systemctl reload nginx
+            echo "✅ Host nginx reloaded!"
 
       - name: Verify deployment
         uses: appleboy/ssh-action@v1.0.3
