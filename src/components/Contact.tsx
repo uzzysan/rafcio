@@ -146,7 +146,7 @@ export function Contact() {
                     alert(t('contact.error'));
                 }
             }
-        } catch (error) {
+        } catch {
             alert(t('contact.error'));
         } finally {
             setIsSubmitting(false);
