@@ -62,15 +62,15 @@ export function Services() {
                         <AnimatedCard 
                             key={service.title}
                             delay={index * 0.15}
-                            hover
-                            glow
+                            hover={true}
+                            glow={true}
                             gradient={service.badge !== null}
-                            className="group relative"
+                            className="group relative noise-bg glass-card"
                         >
-                            <CardContent className="h-full flex flex-col">
+                            <CardContent className="h-full flex flex-col p-8">
                                 {/* Badge */}
                                 {service.badge && (
-                                    <div className="absolute top-4 right-4">
+                                    <div className="absolute top-6 right-6">
                                         <Badge variant="gradient" size="sm">
                                             {t(service.badge)}
                                         </Badge>
@@ -78,24 +78,24 @@ export function Services() {
                                 )}
 
                                 {/* Icon */}
-                                <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${service.gradient} flex items-center justify-center mb-6 shadow-lg shadow-${service.gradient.split(' ')[1]}/20`}>
-                                    <service.icon size={28} className="text-white" />
+                                <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${service.gradient} flex items-center justify-center mb-8 shadow-lg shadow-${service.gradient.split(' ')[1]}/20 group-hover:scale-110 transition-transform duration-350`}>
+                                    <service.icon size={26} className="text-white" />
                                 </div>
 
                                 {/* Content */}
-                                <h3 className="text-xl font-bold text-[var(--foreground)] mb-3 group-hover:text-[var(--accent)] transition-colors">
+                                <h3 className="text-xl font-bold text-[var(--foreground)] font-display mb-3 group-hover:text-[var(--accent)] transition-colors">
                                     {t(service.title)}
                                 </h3>
-                                <p className="text-[var(--muted-foreground)] leading-relaxed mb-6 flex-grow">
+                                <p className="text-[var(--muted-foreground)] text-sm leading-relaxed text-pretty mb-6 flex-grow">
                                     {t(service.description)}
                                 </p>
 
                                 {/* Features list */}
-                                <ul className="space-y-3">
+                                <ul className="space-y-3.5 mb-8">
                                     {service.features.map((feature, i) => (
                                         <li key={i} className="flex items-start gap-3">
-                                            <CheckCircle2 size={18} className="text-[var(--accent)] mt-0.5 flex-shrink-0" />
-                                            <span className="text-sm text-[var(--muted-foreground)]">{t(feature)}</span>
+                                            <CheckCircle2 size={16} className="text-[var(--accent)] mt-0.5 flex-shrink-0" />
+                                            <span className="text-sm text-[var(--muted-foreground)] leading-snug">{t(feature)}</span>
                                         </li>
                                     ))}
                                 </ul>
@@ -103,11 +103,11 @@ export function Services() {
                                 {/* CTA */}
                                 <motion.a
                                     href="#contact"
-                                    className="mt-6 flex items-center gap-2 text-[var(--accent)] font-medium text-sm group/link"
+                                    className="mt-auto pt-4 flex items-center gap-2 text-[var(--accent)] font-semibold text-sm group/link border-t border-[var(--border)]/40"
                                     whileHover={{ x: 4 }}
                                 >
                                     {t('services.cta')}
-                                    <ArrowUpRight size={16} className="transition-transform group-hover/link:translate-x-1 group-hover/link:-translate-y-1" />
+                                    <ArrowUpRight size={15} className="transition-transform group-hover/link:translate-x-1 group-hover/link:-translate-y-1" />
                                 </motion.a>
                             </CardContent>
                         </AnimatedCard>

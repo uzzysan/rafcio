@@ -1,4 +1,4 @@
-import { Inter } from 'next/font/google';
+import { Inter, Plus_Jakarta_Sans } from 'next/font/google';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, getTranslations } from 'next-intl/server';
 import { ThemeProvider } from '@/components/theme-provider';
@@ -11,6 +11,12 @@ const inter = Inter({
     subsets: ['latin'],
     display: 'swap',
     variable: '--font-inter'
+});
+
+const plusJakarta = Plus_Jakarta_Sans({
+    subsets: ['latin'],
+    display: 'swap',
+    variable: '--font-jakarta'
 });
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
@@ -67,7 +73,7 @@ export default async function LocaleLayout({
     const messages = await getMessages();
 
     return (
-        <html lang={locale} suppressHydrationWarning className={inter.variable}>
+        <html lang={locale} suppressHydrationWarning className={`${inter.variable} ${plusJakarta.variable}`}>
             <body className={`${inter.className} antialiased`}>
                 <Analytics />
                 <JsonLd locale={locale} />

@@ -10,17 +10,17 @@ export function Hero() {
     const t = useTranslations('HomePage');
 
     return (
-        <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
+        <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16 noise-bg">
             {/* Animated Background Grid */}
             <div className="absolute inset-0 -z-20">
-                <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]" />
-                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[var(--background)]/50 to-[var(--background)]" />
+                <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808008_1px,transparent_1px),linear-gradient(to_bottom,#80808008_1px,transparent_1px)] bg-[size:32px_32px] dark:bg-[linear-gradient(to_right,#ffffff03_1px,transparent_1px),linear-gradient(to_bottom,#ffffff03_1px,transparent_1px)]" />
+                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[var(--background)]/80 to-[var(--background)]" />
             </div>
 
             {/* Gradient Orbs */}
-            <div className="absolute top-1/4 -left-32 w-[500px] h-[500px] bg-[var(--accent)]/20 rounded-full blur-[120px] -z-10 animate-pulse-glow" />
-            <div className="absolute -bottom-32 -right-32 w-[600px] h-[600px] bg-[var(--accent-secondary)]/20 rounded-full blur-[120px] -z-10 animate-pulse-glow" style={{ animationDelay: '2s' }} />
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[var(--gradient-accent)]/10 rounded-full blur-[150px] -z-10" />
+            <div className="absolute top-1/4 -left-32 w-[550px] h-[550px] bg-[var(--accent)]/15 rounded-full blur-[140px] -z-10 animate-pulse-glow" />
+            <div className="absolute -bottom-32 -right-32 w-[650px] h-[650px] bg-[var(--accent-secondary)]/15 rounded-full blur-[140px] -z-10 animate-pulse-glow" style={{ animationDelay: '2s' }} />
+            <div className="absolute top-1/3 left-1/3 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[900px] bg-[var(--gradient-accent)]/8 rounded-full blur-[160px] -z-10" />
 
             <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <div className="flex flex-col-reverse lg:flex-row items-center gap-12 lg:gap-20">
@@ -46,7 +46,7 @@ export function Hero() {
 
                         {/* Title */}
                         <motion.h1 
-                            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-[var(--foreground)] mb-6"
+                            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-[var(--foreground)] font-display text-balance mb-6"
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: 0.3, duration: 0.6 }}
@@ -59,7 +59,7 @@ export function Hero() {
 
                         {/* Slogan */}
                         <motion.p 
-                            className="text-lg sm:text-xl md:text-2xl text-[var(--muted-foreground)] mb-8 max-w-2xl mx-auto lg:mx-0 leading-relaxed"
+                            className="text-lg sm:text-xl md:text-2xl text-[var(--muted-foreground)] font-medium text-balance mb-8 max-w-2xl mx-auto lg:mx-0 leading-relaxed"
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: 0.4, duration: 0.6 }}
@@ -69,7 +69,7 @@ export function Hero() {
 
                         {/* Description */}
                         <motion.p 
-                            className="text-base text-[var(--muted-foreground)]/80 mb-10 max-w-xl mx-auto lg:mx-0 leading-relaxed"
+                            className="text-base text-[var(--muted-foreground)]/80 text-pretty mb-10 max-w-xl mx-auto lg:mx-0 leading-relaxed"
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: 0.5, duration: 0.6 }}
@@ -138,7 +138,7 @@ export function Hero() {
                                 <div className="absolute -inset-4 border-2 border-dashed border-[var(--accent)]/30 rounded-[2rem] animate-spin" style={{ animationDuration: '30s' }} />
                                 
                                 {/* Image */}
-                                <div className="relative w-full h-full rounded-[var(--radius-image)] overflow-hidden border border-[var(--border)] shadow-2xl">
+                                <div className="relative w-full h-full rounded-[var(--radius-image)] overflow-hidden border border-[var(--border)] shadow-2xl noise-bg">
                                     <Image
                                         src="/bright_bg.jpg"
                                         alt={t('title')}

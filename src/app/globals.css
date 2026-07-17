@@ -2,8 +2,8 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
-  --font-sans: 'Inter', system-ui, sans-serif;
-  --font-display: 'Inter', system-ui, sans-serif;
+  --font-sans: var(--font-inter), system-ui, sans-serif;
+  --font-display: var(--font-jakarta), system-ui, sans-serif;
 
   /* Core colors */
   --color-background: var(--background);
@@ -24,8 +24,8 @@
   --color-gradient-end: var(--gradient-end);
   --color-gradient-accent: var(--gradient-accent);
 
-  --radius-image: 1rem;
-  --radius-card: 1.25rem;
+  --radius-image: 1.5rem;
+  --radius-card: 1.5rem;
   --radius-button: 9999px;
 }
 
@@ -34,58 +34,58 @@
    ======================================== */
 :root {
   /* Base colors */
-  --background: #fafafa;
-  --foreground: #0f172a;
+  --background: #f8fafc;
+  --foreground: #090d16;
   
-  /* Primary accent - Sapphire blue for trust/professionalism */
-  --accent: #0f4c81;
+  /* Primary accent - Indigo / Royal blue for corporate trust */
+  --accent: #4f46e5;
   --accent-foreground: #ffffff;
-  --accent-secondary: #06b6d4;
+  --accent-secondary: #0ea5e9;
   
   /* Surfaces */
   --card: #ffffff;
-  --card-foreground: #0f172a;
+  --card-foreground: #090d16;
   --muted: #f1f5f9;
-  --muted-foreground: #64748b;
+  --muted-foreground: #475569;
   --border: #e2e8f0;
   
   /* Gradients */
-  --gradient-start: #0f4c81;
-  --gradient-end: #06b6d4;
-  --gradient-accent: #8b5cf6;
+  --gradient-start: #4f46e5;
+  --gradient-end: #0ea5e9;
+  --gradient-accent: #10b981;
   
   /* Shadows */
-  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.04);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.05), 0 2px 4px -2px rgb(0 0 0 / 0.05);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.05), 0 4px 6px -4px rgb(0 0 0 / 0.05);
+  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.05), 0 8px 10px -6px rgb(0 0 0 / 0.05);
   --shadow-glow: 0 0 40px -10px var(--accent);
 }
 
 /* ========================================
-   DARK MODE - Sophisticated & Modern
+   DARK MODE - Sophisticated & Obsidian
    ======================================== */
 .dark {
   /* Base colors */
-  --background: #030712;
+  --background: #050814;
   --foreground: #f8fafc;
   
-  /* Primary accent - Cyan/Teal for data/tech feel */
-  --accent: #22d3ee;
-  --accent-foreground: #0f172a;
-  --accent-secondary: #818cf8;
+  /* Primary accent - Cyber Emerald Green / Mint for intelligence & data vibe */
+  --accent: #10b981;
+  --accent-foreground: #050814;
+  --accent-secondary: #06b6d4;
   
   /* Surfaces */
-  --card: #0f172a;
+  --card: #0b0f19;
   --card-foreground: #f8fafc;
-  --muted: #1e293b;
+  --muted: #111827;
   --muted-foreground: #94a3b8;
-  --border: #1e293b;
+  --border: #1f2937;
   
   /* Gradients */
-  --gradient-start: #22d3ee;
-  --gradient-end: #818cf8;
-  --gradient-accent: #c084fc;
+  --gradient-start: #10b981;
+  --gradient-end: #06b6d4;
+  --gradient-accent: #6366f1;
   
   /* Shadows */
   --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.3);
@@ -295,6 +295,33 @@ body {
    ======================================== */
 .text-balance {
   text-wrap: balance;
+}
+
+.text-pretty {
+  text-wrap: pretty;
+}
+
+.font-display {
+  font-family: var(--font-display), var(--font-sans);
+}
+
+.noise-bg {
+  position: relative;
+}
+
+.noise-bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  opacity: 0.015;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  z-index: 1;
+  border-radius: inherit;
+}
+
+.dark .noise-bg::after {
+  opacity: 0.035;
 }
 
 .section-padding {
