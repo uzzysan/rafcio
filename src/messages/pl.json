@@ -1,200 +1,269 @@
 {
-    "HomePage": {
-        "seo": {
-            "title": "Rafał Maculewicz | Analityk Danych i Ekspert Power BI",
-            "description": "Profesjonalny analityk danych, ekspert Power BI i programista full-stack pomagający organizacjom przekształcać dane w strategiczne decyzje.",
-            "keywords": "Analityk Danych, Power BI, Business Intelligence, Azure, Inżynieria Danych, Programista Full-Stack, Śrem, Polska"
+  "HomePage": {
+    "seo": {
+      "title": "Rafał Maculewicz | Zarządzanie zespołami i projektami",
+      "description": "Koordynacja zespołów, realizacja projektów, konsulting Business Intelligence i praktyczne szkolenia łączące biznes z technologią.",
+      "keywords": "zarządzanie zespołami, prowadzenie projektów, Business Intelligence, Power BI, współpraca z interesariuszami, konsulting, szkolenia"
+    },
+    "title": "Rafał Maculewicz",
+    "role": "Zarządzanie zespołami i projektami • Business Intelligence",
+    "slogan": "Łączę ludzi, biznes i technologię, aby złożona praca sprawnie posuwała się naprzód.",
+    "description": "Pomagam zespołom porządkować złożoną pracę, łączyć perspektywę biznesową i techniczną oraz dostarczać praktyczne rozwiązania.",
+    "cta": "Porozmawiajmy",
+    "hero": {
+      "eyebrow": "Koordynacja zespołów • Realizacja projektów • Business Intelligence",
+      "greeting": "Cześć, jestem",
+      "title": "Łączę ludzi, biznes i technologię.",
+      "subtitle": "Organizuję pracę zespołów BI, wspieram realizację projektów i pomagam przekładać dane na decyzje biznesowe.",
+      "description": "Pomagam zespołom porządkować złożoną pracę, łączyć perspektywę biznesową i techniczną oraz dostarczać rozwiązania użyteczne także po wdrożeniu.",
+      "powerbiBadge": "Business Intelligence",
+      "azureBadge": "Realizacja projektów",
+      "ctaPrimary": "Porozmawiajmy",
+      "ctaSecondary": "Poznaj moje doświadczenie",
+      "experienceCta": "Poznaj moje doświadczenie",
+      "portraitLabel": "Rafał Maculewicz — biznes i technologia",
+      "availability": "Otwarty na role związane z prowadzeniem zespołów i projektów oraz współpracę konsultingową i szkoleniową",
+      "scroll": "Odkryj",
+      "stats": {
+        "years": "Doświadczenie międzyfunkcyjne",
+        "satisfaction": "Współpraca oparta na zaufaniu"
+      }
+    },
+    "nav": {
+      "about": "O mnie",
+      "services": "Jak pomagam",
+      "projects": "Wybrane projekty",
+      "experience": "Doświadczenie",
+      "contact": "Kontakt",
+      "hire": "Porozmawiajmy",
+      "language": "Język",
+      "theme": "Motyw"
+      ,"primaryLabel": "Główna nawigacja"
+      ,"mobileLabel": "Nawigacja mobilna"
+      ,"openMenu": "Otwórz menu"
+      ,"closeMenu": "Zamknij menu"
+      ,"homeLabel": "Przejdź na stronę główną"
+      ,"skipToContent": "Przejdź do głównej treści"
+      ,"toggleTheme": "Zmień motyw kolorystyczny"
+    },
+    "about": {
+      "label": "Profil",
+      "subtitle": "Od marketingu do Business Intelligence",
+      "heading": "Pomagam zespołom zamieniać złożoność w skoordynowane działanie",
+      "description": "Łączę koordynację pracy, wsparcie interesariuszy i praktyczne doświadczenie Business Intelligence zdobyte w międzynarodowych organizacjach.",
+      "skills": "Co wnoszę",
+      "features": {
+        "analytics": {
+          "title": "Business Intelligence",
+          "description": "Rozumiem raportowanie, zależności danych i potrzeby operacyjne na tyle dobrze, by wspierać praktyczne decyzje."
         },
-        "title": "Rafał Maculewicz",
-        "role": "Analityk Danych • Ekspert Power BI • Programista",
-        "slogan": "Przekształcam złożone dane w strategiczne decyzje biznesowe.",
-        
-        "hero": {
-            "greeting": "Cześć, jestem",
-            "description": "Pomagam organizacjom wykorzystać potencjał ich danych poprzez zaawansowaną analitykę, niestandardowe rozwiązania Power BI i dedykowane oprogramowanie. Współpracuję z firmami każdej wielkości – od lokalnych przedsiębiorstw po międzynarodowe korporacje.",
-            "powerbiBadge": "Ekspert",
-            "azureBadge": "Certyfikowany",
-            "ctaPrimary": "Porozmawiajmy",
-            "ctaSecondary": "Zobacz Projekty",
-            "scroll": "Przewiń",
-            "stats": {
-                "years": "Lat Doświadczenia",
-                "satisfaction": "Zadowolenie Klientów"
-            }
+        "development": {
+          "title": "Realizacja projektów",
+          "description": "Porządkuję priorytety, zależności i dalsze działania w pracy obejmującej wiele zespołów i interesariuszy."
         },
-
-        "nav": {
-            "about": "O mnie",
-            "services": "Usługi",
-            "projects": "Projekty",
-            "experience": "Doświadczenie",
-            "contact": "Kontakt",
-            "hire": "Napisz do mnie",
-            "language": "Język",
-            "theme": "Motyw"
+        "training": {
+          "title": "Szkolenia i dzielenie się wiedzą",
+          "description": "Upraszczam złożone tematy i pomagam współpracownikom pewniej korzystać z danych."
         },
-
-        "about": {
-            "label": "O Mnie",
-            "subtitle": "Buduję mosty między technologią a strategią biznesową",
-            "heading": "Więcej Niż Tylko Kod",
-            "skills": "Główne Specjalizacje",
-            "features": {
-                "analytics": {
-                    "title": "Analityka Danych",
-                    "description": "Przekształcanie surowych danych w wartościowe informacje biznesowe poprzez zaawansowaną analitykę i techniki wizualizacji."
-                },
-                "development": {
-                    "title": "Rozwój Oprogramowania",
-                    "description": "Tworzenie dedykowanych rozwiązań software'owych, aplikacji webowych i narzędzi automatyzacji usprawniających procesy biznesowe."
-                },
-                "training": {
-                    "title": "Szkolenia Power BI",
-                    "description": "Wzmacnianie zespołów kompleksowymi szkoleniami Power BI, od podstaw po zaawansowany DAX i modelowanie danych."
-                },
-                "consulting": {
-                    "title": "Konsulting Strategiczny",
-                    "description": "Budowanie mostów między technologią a strategią biznesową w celu wspierania podejmowania decyzji opartych na danych."
-                }
-            }
-        },
-        "aboutText1": "Jestem specjalistą, który buduje mosty między skomplikowaną technologią a realnymi potrzebami biznesu. Moja ścieżka zawodowa to unikalne połączenie świata IT oraz zarządzania – zanim całkowicie poświęciłem się analityce danych, zdobywałem doświadczenie jako Menedżer Marketingu w międzynarodowym koncernie Bostik.",
-        "aboutText2": "Dzięki temu, tworząc dashboardy w Power BI czy projektując architekturę w Azure, nie myślę tylko o kodzie. Myślę o tym, jak te dane wpłyną na Twoją marżę, efektywność sprzedaży i szybkość podejmowania decyzji. Pomagam firmom przestać 'zgadywać' i zacząć działać w oparciu o fakty.",
-
-        "services": {
-            "label": "Usługi",
-            "subtitle": "Kompleksowe rozwiązania analityczne i programistyczne dopasowane do Twoich potrzeb",
-            "popular": "Najpopularniejsze",
-            "cta": "Skontaktuj się",
-            "trusted": "Zaufali mi liderzy branży",
-            
-            "powerbi": {
-                "title": "Rozwiązania Power BI",
-                "description": "Kompleksowe systemy Business Intelligence, które przekształcają surowe dane w wartościowe informacje.",
-                "f1": "Projektowanie i tworzenie dashboardów",
-                "f2": "Zaawansowane obliczenia DAX i modelowanie danych",
-                "f3": "Wdrażanie raportów w skali korporacyjnej",
-                "f4": "Optymalizacja wydajności i zarządzanie"
-            },
-            "development": {
-                "title": "Rozwój Oprogramowania",
-                "description": "Dedykowane rozwiązania software'owe zbudowane z wykorzystaniem nowoczesnych technologii.",
-                "f1": "Aplikacje webowe full-stack",
-                "f2": "Pipelines danych i procesy ETL",
-                "f3": "Rozwój API i integracje",
-                "f4": "Automatyzacja procesów biznesowych"
-            },
-            "training": {
-                "title": "Szkolenia i Konsulting",
-                "description": "Wzmacniaj swój zespół wiedzą i najlepszymi praktykami w zakresie analityki danych.",
-                "f1": "Korporacyjne programy szkoleniowe Power BI",
-                "f2": "Warsztaty z analityki danych",
-                "f3": "Konsulting i zarządzanie danymi",
-                "f4": "Mentorstwo i wsparcie"
-            }
-        },
-
-        "projects": {
-            "label": "Portfolio",
-            "subtitle": "Wybrane projekty prezentujące doświadczenie w analityce danych i tworzeniu oprogramowania",
-            "featured": "Wyróżnione",
-            "viewProject": "Zobacz Projekt",
-            "visit": "Odwiedź Stronę",
-            "learnMore": "Dowiedz się Więcej",
-            "more": "Chcesz zobaczyć więcej projektów?",
-            "github": "Zobacz na GitHub"
-        },
-
-        "experience": {
-            "label": "Doświadczenie",
-            "subtitle": "Ścieżka zawodowa obejmująca zarządzanie korporacyjne, inżynierię danych i rozwój oprogramowania",
-            "workTitle": "Doświadczenie Zawodowe",
-            "certsTitle": "Certyfikaty",
-            "work": "Praca",
-            "certificate": "Certyfikat",
-            
-            "haleon": {
-                "role": "Inżynier Systemów End-to-End",
-                "period": "2021 - Obecnie",
-                "description": "Prowadzenie rozwiązań opartych na Azure i implementacji Power BI. Dostarczanie programów szkoleniowych oraz ustanawianie frameworków zarządzania danymi w skali korporacyjnej."
-            },
-            "carlsberg": {
-                "role": "Ekspert ds. Raportowania",
-                "period": "2019 - 2021",
-                "description": "Przewodzenie inicjatywom optymalizacji procesów i budowanie zautomatyzowanych systemów raportowania. Transformacja manualnych procesów w zintegrowane platformy analityczne."
-            },
-            "teb": {
-                "role": "BI Data Analyst",
-                "period": "2017 - 2019",
-                "description": "Przygotowywanie raportów Power BI oraz prezentacja i omówienie danych na spotkaniach różnych zespołów w Dziale Badań i Analiz."
-            },
-            "bostik": {
-                "role": "Menedżer Marketingu",
-                "period": "2014 - 2017",
-                "description": "Zarządzanie kampaniami marketingowymi na rynku Polskim, pozycjonowanie rynkowe produktów, akcje promocyjne i wsparcie sprzedaży. Przygotowywanie raportów kwartalnych dla wyższego managementu."
-            },
-            
-            "fabric": {
-                "title": "Fabric Analytics Engineer Associate"
-            },
-            "scrum": {
-                "title": "Certyfikowany Scrum Master i Product Owner"
-            },
-            "powerbi": {
-                "title": "Power BI Masterclass"
-            },
-            "dax": {
-                "title": "DAX Tools"
-            },
-            "ssas": {
-                "title": "SSAS Tabular"
-            },
-            "datawarehouse": {
-                "title": "Data Warehouse (SQL Server)"
-            }
-        },
-
-        "contact": {
-            "label": "Kontakt",
-            "subtitle": "Gotowy na przekształcenie danych w przewagę konkurencyjną? Porozmawiajmy o Twoim projekcie.",
-            "heading": "Stwórzmy Coś Wielkiego Razem",
-            "available": "Dostępny dla nowych projektów",
-            "response": "Zazwyczaj odpowiadam w ciągu 24 godzin",
-            "thankYou": "Dziękuję za kontakt. Odpowiem najszybciej jak to możliwe.",
-            "sendAnother": "Wyślij kolejną wiadomość",
-            "sending": "Wysyłanie...",
-            "error": "Wystąpił błąd podczas wysyłania. Spróbuj ponownie lub skontaktuj się bezpośrednio przez email.",
-            "captchaRequired": "Proszę potwierdzić, że nie jesteś robotem.",
-            "captchaInfo": "Ta strona jest chroniona przez hCaptcha. Privacy Policy | Terms of Service",
-            
-            "subject": "Temat",
-            "selectSubject": "Wybierz temat",
-            "subjects": {
-                "powerbi": "Projekt Power BI",
-                "development": "Rozwój Oprogramowania",
-                "training": "Zapytanie o Szkolenie",
-                "consulting": "Konsulting",
-                "other": "Inne"
-            },
-            "namePlaceholder": "Twoje imię",
-            "emailPlaceholder": "twoj@email.com",
-            "messagePlaceholder": "Opisz swój projekt, cele i termin..."
-        },
-        "contactText": "Masz dane, ale brakuje Ci wniosków? Porozmawiajmy o tym, jak mogę pomóc Twojej firmie urosnąć.",
-        "sendMessage": "Wyślij Wiadomość",
-        "messageSent": "Wiadomość Wysłana!",
-        "name": "Imię",
-        "email": "Email",
-        "message": "Wiadomość",
-
-        "footer": {
-            "description": "Analityk danych, ekspert Power BI i programista pomagający organizacjom podejmować mądrzejsze decyzje dzięki danym.",
-            "location": "Śrem, Polska",
-            "links": "Szybkie Linki",
-            "contact": "Kontakt",
-            "support": "Wesprzyj",
-            "rights": "Wszelkie prawa zastrzeżone.",
-            "madeWith": "Stworzone z"
+        "consulting": {
+          "title": "Biznes i technologia",
+          "description": "Przekładam kontekst biznesowy na jasny kierunek dla zespołów technicznych, a uwarunkowania techniczne na użyteczne wybory dla interesariuszy."
         }
+      },
+      "pillars": {
+        "leadership": {
+          "title": "Koordynacja zespołów",
+          "description": "Jasne priorytety, konsekwentne działanie i warunki sprzyjające skutecznej współpracy."
+        },
+        "businessTechnology": {
+          "title": "Biznes i technologia",
+          "description": "Wspólny język dla interesariuszy, analityków i programistów, osadzony w realiach realizacji."
+        },
+        "development": {
+          "title": "Rozwój innych",
+          "description": "Praktyczny coaching, szkolenia i dzielenie się wiedzą, które budują pewność i samodzielność."
+        }
+      }
+    },
+    "aboutText1": "W Haleon moim głównym obszarem było organizowanie pracy zespołu Business Intelligence przygotowującego raporty Supply Chain, w tym OTIF. Od ponad trzech lat utrzymuję także część eSCAPE związaną z Power BI i wspieram zespoły oraz projekty poza moim podstawowym zakresem.",
+    "aboutText2": "Wcześniej, jako Marketing Manager odpowiedzialny za polski rynek w Bostik, nauczyłem się patrzeć na technologię przez pryzmat priorytetów biznesowych, klientów i decyzji handlowych. Ukończyłem kursy Scrum Master i Product Owner prowadzone przez Scrum Inc. oraz Coaching Essentials w ramach ścieżki menedżerskiej w Haleon.",
+    "services": {
+      "label": "Jak pomagam",
+      "intro": "Wsparcie dla zespołów, które potrzebują struktury, uzgodnionego kierunku i praktycznego doświadczenia w realizacji.",
+      "subtitle": "W czym mogę pomóc",
+      "popular": "Główny obszar",
+      "cta": "Porozmawiajmy",
+      "trusted": "Doświadczenie w międzynarodowych organizacjach",
+      "powerbi": {
+        "title": "Koordynacja zespołów i projektów",
+        "description": "Pomagam ustalać priorytety, wyjaśniać odpowiedzialność i utrzymywać tempo pracy między funkcjami.",
+        "f1": "Planowanie pracy i koordynacja realizacji",
+        "f2": "Komunikacja i uzgodnienia z interesariuszami",
+        "f3": "Rozwiązywanie zależności i problemów",
+        "f4": "Wsparcie podczas wdrożenia i adaptacji"
+      },
+      "development": {
+        "title": "Doradztwo BI i raportowanie",
+        "description": "Łączę pytania biznesowe z rozwiązaniami raportowymi i Business Intelligence, które da się utrzymać.",
+        "f1": "Doprecyzowanie potrzeb i zakresu raportowania",
+        "f2": "Doradztwo w rozwiązaniach Power BI",
+        "f3": "Uzgodnienia między biznesem i IT",
+        "f4": "Wsparcie operacyjne i usprawnienia"
+      },
+      "training": {
+        "title": "Szkolenia i dzielenie się wiedzą",
+        "description": "Praktyczna nauka dopasowana do kontekstu, narzędzi i codziennej pracy zespołu.",
+        "f1": "Szkolenia Power BI dla zespołów",
+        "f2": "Warsztaty z pracy z danymi",
+        "f3": "Dopasowane studia przypadków i materiały",
+        "f4": "Coaching i dalsze wsparcie"
+      }
+    },
+    "projects": {
+      "label": "Wybrane projekty",
+      "subtitle": "Pomysły sprawdzone w praktyce",
+      "technologies": "Wykorzystane technologie",
+      "items": {
+        "ev_assist": {
+          "eyebrow": "Elektromobilność",
+          "title": "EV Assist",
+          "description": "Aplikacja internetowa, która pomaga kierowcom samochodów elektrycznych zaplanować zapotrzebowanie na ładowanie podczas podróży.",
+          "detail": "Projekt łączy planowanie trasy, dane pojazdu i obliczenia dotyczące ładowania w przejrzystym interfejsie, który może działać również jako Progressive Web App."
+        },
+        "fairpact": {
+          "eyebrow": "Analiza umów",
+          "title": "FairPact",
+          "description": "Narzędzie pomagające użytkownikom rozpoznawać potencjalnie niedozwolone zapisy w umowach.",
+          "detail": "Aplikacja łączy przetwarzanie dokumentów, OCR i analizę języka, aby ułatwić poruszanie się po treści umowy."
+        }
+      },
+      "featured": "Wybrane",
+      "viewProject": "Zobacz projekt",
+      "visit": "Odwiedź stronę",
+      "learnMore": "Dowiedz się więcej",
+      "more": "Chcesz poznać sposób pracy stojący za projektami?",
+      "github": "Zobacz na GitHub"
+    },
+    "experience": {
+      "label": "Doświadczenie",
+      "subtitle": "Doświadczenie zawodowe",
+      "workTitle": "Doświadczenie zawodowe",
+      "certsTitle": "Nauka i rozwój",
+      "work": "Doświadczenie",
+      "certificate": "Kurs",
+      "haleon": {
+        "role": "End-to-End System Engineer",
+        "period": "2021 – obecnie",
+        "description": "Organizowanie pracy zespołu BI przy raportowaniu Supply Chain, w tym OTIF; utrzymanie części eSCAPE związanej z Power BI; wsparcie raportowania, analiz problemów, automatyzacji, rekrutacji i inicjatyw edukacyjnych w różnych zespołach."
+      },
+      "carlsberg": {
+        "role": "Senior Reporting Expert",
+        "period": "2019 – 2021",
+        "description": "Tworzenie rozwiązań raportowych, usprawnianie procesów i szkolenie współpracowników w międzynarodowym centrum usług wspólnych."
+      },
+      "teb": {
+        "role": "BI Data Analyst",
+        "period": "2017 – 2019",
+        "description": "Przygotowywanie raportów Power BI oraz prezentowanie i omawianie wniosków z zespołami Działu Badań i Analiz."
+      },
+      "bostik": {
+        "role": "Marketing Manager — rynek polski",
+        "period": "2014 – 2017",
+        "description": "Zarządzanie pozycjonowaniem produktów, kampaniami i wsparciem sprzedaży oraz przygotowywanie raportów dla kadry zarządzającej — doświadczenie, które do dziś kształtuje moje spojrzenie biznesowe."
+      },
+      "fabric": { "title": "Microsoft Fabric Analytics Engineer Associate" },
+      "scrum": { "title": "Kursy Scrum Master i Product Owner — Scrum Inc." },
+      "coaching": { "title": "Coaching Essentials — ścieżka menedżerska" },
+      "powerbi": { "title": "Power BI Masterclass" },
+      "dax": { "title": "DAX Tools" },
+      "ssas": { "title": "SSAS Tabular" },
+      "datawarehouse": { "title": "Data Warehouse (SQL Server)" }
+    },
+    "testimonials": {
+      "label": "Opinie współpracowników",
+      "heading": "Jak inni opisują współpracę ze mną",
+      "subtitle": "Wybrane opinie pochodzące z różnych projektów i zespołów.",
+      "translationNote": "Polskie tłumaczenia oryginalnych opinii w języku angielskim.",
+      "items": {
+        "q1": {
+          "quote": "Konsekwentnie wykazujesz się odpowiedzialnością, kompetencją i determinacją, wnosząc dużą wartość dzięki swojej wiedzy i niezawodności.",
+          "author": "Christopher Kelly",
+          "context": "Opinia Haleon, 2 października 2025"
+        },
+        "q2": {
+          "quote": "To on w zespole technicznym przejął inicjatywę i odpowiedzialność, inspirując zespół.",
+          "author": "Bernd Eglsaeer",
+          "context": "Opinia dotycząca ABACUS, 6 grudnia 2022"
+        },
+        "q3": {
+          "quote": "Rafał jest bardzo otwarty na współpracę, zorganizowany, metodyczny i dobrze przygotowany. Zawsze wykazuje duże zaangażowanie w cele projektu i zespołu.",
+          "author": "Bernd Eglsaeer",
+          "context": "Opinia projektowa, 6 grudnia 2022"
+        },
+        "q4": {
+          "quote": "Sprawiłeś, że złożony temat stał się przystępny i użyteczny, dzięki czemu zespół mógł pewnie wykorzystywać Power BI w swojej pracy.",
+          "author": "Agnieszka Szymaniak-Kurowska",
+          "context": "Opinia po szkoleniu, 9 stycznia 2025"
+        },
+        "q5": {
+          "quote": "Uczestniczył we wszystkich spotkaniach, był elastyczny i łatwo było się z nim skontaktować, przygotował studia przypadków i reprezentował Haleon z dużym profesjonalizmem.",
+          "author": "Marta Jaworska",
+          "context": "Wsparcie rekrutacji, 5 września 2024"
+        },
+        "q6": {
+          "quote": "Jest bardzo odpowiedzialny i rzetelny, a inni darzą go dużym zaufaniem i szacunkiem.",
+          "author": "Annie Yang",
+          "context": "Opinia Haleon, grudzień 2023"
+        }
+      }
+    },
+    "contact": {
+      "label": "Kontakt",
+      "subtitle": "Porozmawiajmy o prowadzeniu zespołów i projektów, Business Intelligence, szkoleniach lub konsultingu.",
+      "heading": "Porozmawiajmy o współpracy.",
+      "available": "Otwarty na ciekawe możliwości i rozmowy",
+      "response": "Odpowiem tak szybko, jak będzie to możliwe",
+      "email": "rafal.maculewicz@tuta.com",
+      "phone": "+48 797 432 297",
+      "emailLabel": "E-mail",
+      "phoneLabel": "Telefon",
+      "linkedin": "LinkedIn",
+      "cta": "Napisz e-mail",
+      "thankYou": "Dziękuję za wiadomość. Wkrótce odpowiem.",
+      "sendAnother": "Wyślij kolejną wiadomość",
+      "sending": "Wysyłanie...",
+      "error": "Nie udało się wysłać wiadomości. Spróbuj ponownie lub napisz bezpośrednio na mój adres e-mail.",
+      "captchaRequired": "Potwierdź, że nie jesteś robotem.",
+      "captchaInfo": "Ta strona jest chroniona przez hCaptcha. Polityka prywatności | Warunki korzystania",
+      "subject": "Temat",
+      "selectSubject": "Wybierz temat",
+      "subjects": {
+        "powerbi": "Business Intelligence",
+        "development": "Wsparcie zespołu lub projektu",
+        "training": "Szkolenie",
+        "consulting": "Konsulting",
+        "other": "Inne"
+      },
+      "namePlaceholder": "Twoje imię",
+      "emailPlaceholder": "twoj@email.com",
+      "messagePlaceholder": "Napisz krótko, o czym chcesz porozmawiać..."
+    },
+    "contactText": "Twój zespół lub projekt potrzebuje więcej struktury, lepszej współpracy albo jaśniejszego kierunku? Porozmawiajmy.",
+    "sendMessage": "Wyślij wiadomość",
+    "messageSent": "Wiadomość wysłana",
+    "name": "Imię",
+    "email": "E-mail",
+    "message": "Wiadomość",
+    "footer": {
+      "description": "Łączę ludzi, biznes i technologię poprzez koordynację zespołów, realizację projektów i Business Intelligence.",
+      "location": "Śrem, Polska",
+      "links": "Odkryj",
+      "contact": "Kontakt",
+      "support": "Wsparcie",
+      "rights": "Wszelkie prawa zastrzeżone.",
+      "madeWith": "Zaprojektowane z dbałością"
+      ,"tagline": "Ludzie, biznes i technologia"
+      ,"backToTop": "Wróć na górę"
     }
+  }
 }

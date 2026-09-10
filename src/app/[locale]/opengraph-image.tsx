@@ -1,139 +1,46 @@
 import { ImageResponse } from 'next/og';
-import { getTranslations } from 'next-intl/server';
 
-export const runtime = 'edge';
-
-export const alt = 'Rafał Maculewicz | Data Analyst & Power BI Expert';
-export const size = {
-  width: 1200,
-  height: 630,
-};
-
+export const alt = 'Rafał Maculewicz — team and project leadership';
+export const size = { width: 1200, height: 630 };
 export const contentType = 'image/png';
+
+const copy = {
+  en: {
+    eyebrow: 'TEAM & PROJECT LEADERSHIP',
+    statement: 'Connecting people, business and technology.',
+    detail: 'Project delivery · Team coordination · Business Intelligence',
+  },
+  pl: {
+    eyebrow: 'ZARZĄDZANIE ZESPOŁAMI I PROJEKTAMI',
+    statement: 'Łączę ludzi, biznes i technologię.',
+    detail: 'Prowadzenie projektów · Koordynacja zespołów · Business Intelligence',
+  },
+} as const;
 
 export default async function Image({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: 'HomePage' });
+  const text = locale === 'en' ? copy.en : copy.pl;
 
   return new ImageResponse(
-    (
-      <div
-        style={{
-          background: 'linear-gradient(135deg, #030712 0%, #0f172a 100%)',
-          width: '100%',
-          height: '100%',
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-          justifyContent: 'center',
-          fontFamily: 'sans-serif',
-          position: 'relative',
-          padding: '40px',
-        }}
-      >
-        {/* Background Decorations */}
-        <div
-          style={{
-            position: 'absolute',
-            top: '-100px',
-            right: '-100px',
-            width: '400px',
-            height: '400px',
-            background: 'rgba(34, 211, 238, 0.1)',
-            borderRadius: '50%',
-            filter: 'blur(100px)',
-          }}
-        />
-        <div
-          style={{
-            position: 'absolute',
-            bottom: '-100px',
-            left: '-100px',
-            width: '400px',
-            height: '400px',
-            background: 'rgba(129, 140, 248, 0.1)',
-            borderRadius: '50%',
-            filter: 'blur(100px)',
-          }}
-        />
-
-        {/* Content Container */}
-        <div
-          style={{
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            border: '1px solid rgba(255, 255, 255, 0.1)',
-            padding: '60px',
-            borderRadius: '40px',
-            background: 'rgba(255, 255, 255, 0.03)',
-            backdropFilter: 'blur(10px)',
-          }}
-        >
-          <div
-            style={{
-              fontSize: '80px',
-              fontWeight: 'bold',
-              background: 'linear-gradient(135deg, #22d3ee 0%, #818cf8 100%)',
-              backgroundClip: 'text',
-              color: 'transparent',
-              marginBottom: '20px',
-            }}
-          >
-            Rafał Maculewicz
-          </div>
-          
-          <div
-            style={{
-              fontSize: '32px',
-              color: '#94a3b8',
-              letterSpacing: '2px',
-              textTransform: 'uppercase',
-              marginBottom: '40px',
-            }}
-          >
-            {t('role')}
-          </div>
-
-          <div
-            style={{
-              display: 'flex',
-              gap: '20px',
-            }}
-          >
-            {['Power BI', 'Data Analytics', 'Azure', 'Dev'].map((tag) => (
-              <div
-                key={tag}
-                style={{
-                  padding: '8px 20px',
-                  borderRadius: '20px',
-                  background: 'rgba(34, 211, 238, 0.1)',
-                  color: '#22d3ee',
-                  fontSize: '18px',
-                  border: '1px solid rgba(34, 211, 238, 0.2)',
-                }}
-              >
-                {tag}
-              </div>
-            ))}
-          </div>
+    <div style={{ width: '100%', height: '100%', display: 'flex', position: 'relative', overflow: 'hidden', background: '#F5F3EE', color: '#172D32', fontFamily: 'Arial, sans-serif', padding: '72px 78px' }}>
+      <div style={{ position: 'absolute', top: 0, right: 0, width: 28, height: '100%', background: '#23666B' }} />
+      <div style={{ position: 'absolute', right: 110, bottom: -170, width: 430, height: 430, border: '2px solid rgba(160, 100, 67, 0.42)', borderRadius: '50%' }} />
+      <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', width: '100%' }}>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+          <div style={{ fontSize: 22, letterSpacing: 4, color: '#23666B', fontWeight: 700 }}>{text.eyebrow}</div>
+          <div style={{ width: 90, height: 90, display: 'flex', alignItems: 'center', justifyContent: 'center', border: '2px solid #23666B', borderRadius: 18, fontSize: 34, fontWeight: 800, letterSpacing: -2 }}>RM</div>
         </div>
-
-        {/* Bottom Bar */}
-        <div
-          style={{
-            position: 'absolute',
-            bottom: '40px',
-            color: '#64748b',
-            fontSize: '20px',
-          }}
-        >
-          maculewicz.pro
+        <div style={{ display: 'flex', flexDirection: 'column', maxWidth: 900 }}>
+          <div style={{ fontSize: 74, lineHeight: 1.03, fontWeight: 800, letterSpacing: -3 }}>Rafał Maculewicz</div>
+          <div style={{ width: 96, height: 6, background: '#A06443', margin: '28px 0' }} />
+          <div style={{ fontSize: 38, lineHeight: 1.18, fontWeight: 500 }}>{text.statement}</div>
+        </div>
+        <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: 21, color: '#456065' }}>
+          <div>{text.detail}</div>
+          <div style={{ color: '#172D32', fontWeight: 700 }}>maculewicz.pro</div>
         </div>
       </div>
-    ),
-    {
-      ...size,
-    }
+    </div>,
+    size,
   );
 }

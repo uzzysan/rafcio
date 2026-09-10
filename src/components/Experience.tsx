@@ -1,293 +1,83 @@
 "use client";
 
-import { useTranslations } from 'next-intl';
-import { motion } from 'framer-motion';
-import { Section, SectionHeader, Container } from '@/components/ui/Section';
-import { Badge } from '@/components/ui/Badge';
-import { 
-    Award, 
-    Briefcase,
-    Calendar
-} from 'lucide-react';
+import { useTranslations } from "next-intl";
+import { Award, BookOpen } from "lucide-react";
+import { Container, Section, SectionHeader } from "@/components/ui/Section";
 
-interface ExperienceItem {
-    id: string;
-    type: 'work' | 'certificate';
-    organization: string;
-    role: string;
-    period: string;
-    description?: string;
-    skills?: string[];
-    badge?: string;
-}
+const experience = [
+  { id: "haleon", organisation: "Haleon" },
+  { id: "carlsberg", organisation: "Carlsberg Shared Services" },
+  { id: "teb", organisation: "TEB Akademia" },
+  { id: "bostik", organisation: "Bostik (Arkema)" }
+] as const;
 
-const experiences: ExperienceItem[] = [
-    {
-        id: 'haleon',
-        type: 'work',
-        organization: 'Haleon (dawniej GSK Consumer Healthcare)',
-        role: 'experience.haleon.role',
-        period: 'experience.haleon.period',
-        description: 'experience.haleon.description',
-        skills: ['Azure', 'Power BI', 'Data Engineering', 'Training']
-    },
-    {
-        id: 'carlsberg',
-        type: 'work',
-        organization: 'Carlsberg Shared Services',
-        role: 'experience.carlsberg.role',
-        period: 'experience.carlsberg.period',
-        description: 'experience.carlsberg.description',
-        skills: ['Reporting', 'Process Optimization', 'Data Analytics']
-    },
-    {
-        id: 'teb',
-        type: 'work',
-        organization: 'TEB Akademia',
-        role: 'experience.teb.role',
-        period: 'experience.teb.period',
-        description: 'experience.teb.description',
-        skills: ['Power BI', 'Data Analysis', 'Reporting', 'Data Presentation']
-    },
-    {
-        id: 'bostik',
-        type: 'work',
-        organization: 'Bostik (Arkema)',
-        role: 'experience.bostik.role',
-        period: 'experience.bostik.period',
-        description: 'experience.bostik.description',
-        skills: ['Marketing', 'Project Management', 'Market Positioning']
-    }
-];
-
-const certifications: ExperienceItem[] = [
-    {
-        id: 'fabric',
-        type: 'certificate',
-        organization: 'Microsoft',
-        role: 'experience.fabric.title',
-        period: '2024',
-        skills: ['Microsoft Fabric', 'Power BI', 'Data Engineering'],
-        badge: '/images/microsoft-certified-associate-badge.svg'
-    },
-    {
-        id: 'scrum',
-        type: 'certificate',
-        organization: 'Scrum Inc.',
-        role: 'experience.scrum.title',
-        period: '2018',
-        skills: ['Agile', 'Scrum', 'Project Management']
-    },
-    {
-        id: 'powerbi',
-        type: 'certificate',
-        organization: 'Udemy',
-        role: 'experience.powerbi.title',
-        period: '2018',
-        skills: ['Power BI', 'Data Visualization', 'DAX']
-    },
-    {
-        id: 'dax',
-        type: 'certificate',
-        organization: 'SQLBI',
-        role: 'experience.dax.title',
-        period: '2021',
-        skills: ['DAX', 'Power BI', 'Data Modeling']
-    },
-    {
-        id: 'ssas',
-        type: 'certificate',
-        organization: 'Udemy',
-        role: 'experience.ssas.title',
-        period: '2021',
-        skills: ['SSAS', 'Tabular Model', 'Data Modeling']
-    },
-    {
-        id: 'datawarehouse',
-        type: 'certificate',
-        organization: 'LinkedIn Learning',
-        role: 'experience.datawarehouse.title',
-        period: '2020',
-        skills: ['SQL Server', 'Data Warehouse', 'ETL']
-    }
-];
-
-function TimelineItem({ item, index }: { item: ExperienceItem; index: number }) {
-    const t = useTranslations('HomePage');
-    const isWork = item.type === 'work';
-
-    return (
-        <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-50px" }}
-            transition={{ delay: index * 0.15, duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-            className="relative pl-8 md:pl-0"
-        >
-            {/* Timeline line */}
-            <div className="absolute left-0 top-0 bottom-0 w-px bg-[var(--border)] md:left-1/2 md:-translate-x-1/2" />
-            
-            {/* Timeline dot */}
-            <div className={`absolute left-0 top-2 w-4 h-4 rounded-full border-4 border-[var(--background)] md:left-1/2 md:-translate-x-1/2 ${isWork ? 'bg-[var(--accent)]' : 'bg-[var(--accent-secondary)]'}`} />
-
-            {/* Content */}
-            <div className={`md:grid md:grid-cols-2 md:gap-8 ${index % 2 === 0 ? '' : 'md:text-right'}`}>
-                {/* Date - shown on opposite side on desktop */}
-                <div className={`hidden md:block ${index % 2 === 0 ? 'md:text-right md:pr-8' : 'md:col-start-2 md:pl-8'}`}>
-                    <span className="inline-flex items-center gap-2 text-sm text-[var(--muted-foreground)]">
-                        <Calendar size={14} />
-                        {t(item.period)}
-                    </span>
-                </div>
-
-                {/* Card */}
-                <div className={`pb-8 md:pb-12 ${index % 2 === 0 ? 'md:col-start-2 md:pl-8' : 'md:col-start-1 md:pr-8 md:text-right'}`}>
-                    <div className="group relative p-6 rounded-2xl bg-[var(--card)] border border-[var(--border)] hover:border-[var(--accent)]/30 transition-all duration-300 hover:shadow-lg">
-                        {/* Mobile date */}
-                        <span className="inline-flex items-center gap-2 text-sm text-[var(--muted-foreground)] mb-2 md:hidden">
-                            <Calendar size={14} />
-                            {t(item.period)}
-                        </span>
-
-                        {/* Type badge */}
-                        <div className={`flex items-center gap-2 mb-3 ${index % 2 === 0 ? '' : 'md:justify-end'}`}>
-                            <Badge variant="soft" size="sm" icon={isWork ? <Briefcase size={12} /> : <Award size={12} />}>
-                                {isWork ? t('experience.work') : t('experience.certificate')}
-                            </Badge>
-                        </div>
-
-                        {/* Organization */}
-                        <h4 className="text-lg font-bold text-[var(--foreground)] mb-1">
-                            {item.organization}
-                        </h4>
-
-                        {/* Role */}
-                        <p className="text-[var(--accent)] font-medium mb-3">
-                            {t(item.role)}
-                        </p>
-
-                        {/* Description */}
-                        {item.description && (
-                            <p className="text-sm text-[var(--muted-foreground)] leading-relaxed mb-4">
-                                {t(item.description)}
-                            </p>
-                        )}
-
-                        {/* Skills */}
-                        {item.skills && (
-                            <div className={`flex flex-wrap gap-2 ${index % 2 === 0 ? '' : 'md:justify-end'}`}>
-                                {item.skills.map((skill) => (
-                                    <span key={skill} className="text-xs px-2.5 py-1 rounded-full bg-[var(--muted)] text-[var(--muted-foreground)]">
-                                        {skill}
-                                    </span>
-                                ))}
-                            </div>
-                        )}
-                    </div>
-                </div>
-            </div>
-        </motion.div>
-    );
-}
+const learning = [
+  { id: "fabric", organisation: "Microsoft", icon: Award },
+  { id: "scrum", organisation: "Scrum Inc.", icon: BookOpen },
+  { id: "coaching", organisation: "Haleon", icon: BookOpen },
+  { id: "powerbi", organisation: "Udemy", icon: BookOpen },
+  { id: "dax", organisation: "SQLBI", icon: BookOpen },
+  { id: "ssas", organisation: "Udemy", icon: BookOpen },
+  { id: "datawarehouse", organisation: "LinkedIn Learning", icon: BookOpen }
+] as const;
 
 export function Experience() {
-    const t = useTranslations('HomePage');
+  const t = useTranslations("HomePage");
 
-    return (
-        <Section id="experience">
-            {/* Background decoration */}
-            <div className="absolute inset-0 -z-10">
-                <div className="absolute top-0 left-1/4 w-96 h-96 bg-[var(--accent)]/5 rounded-full blur-[120px]" />
+  return (
+    <Section id="experience">
+      <Container>
+        <SectionHeader title={t("experience.label")} subtitle={t("experience.subtitle")} />
+
+        <div className="grid gap-12 lg:grid-cols-[minmax(0,1.45fr)_minmax(18rem,0.75fr)] lg:gap-16">
+          <div>
+            <ol className="divide-y divide-[var(--border)]">
+              {experience.map((item) => (
+                <li key={item.id} className="grid gap-4 py-7 sm:grid-cols-[8rem_minmax(0,1fr)] sm:gap-8">
+                  <p className="text-sm font-medium text-[var(--muted-foreground)]">
+                    {t(`experience.${item.id}.period`)}
+                  </p>
+                  <div>
+                    <p className="mb-1 text-sm font-medium uppercase tracking-[0.14em] text-[var(--accent)]">
+                      {item.organisation}
+                    </p>
+                    <h3 className="text-xl font-semibold text-[var(--foreground)]">
+                      {t(`experience.${item.id}.role`)}
+                    </h3>
+                    <p className="mt-3 max-w-2xl leading-7 text-[var(--muted-foreground)]">
+                      {t(`experience.${item.id}.description`)}
+                    </p>
+                  </div>
+                </li>
+              ))}
+            </ol>
+          </div>
+
+          <aside>
+            <div className="mb-7 flex items-center gap-3 border-b border-[var(--border)] pb-4">
+              <Award aria-hidden="true" className="text-[var(--accent-secondary)]" size={20} />
+              <h3 className="text-xl font-semibold text-[var(--foreground)]">{t("experience.certsTitle")}</h3>
             </div>
 
-            <Container>
-                <SectionHeader 
-                    title={t('experience.label')}
-                    subtitle={t('experience.subtitle')}
-                />
-
-                {/* Work Experience */}
-                <div className="mb-16">
-                    <motion.h3 
-                        className="text-xl font-semibold text-[var(--foreground)] mb-8 flex items-center gap-3"
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                    >
-                        <div className="w-10 h-10 rounded-xl bg-[var(--accent)]/10 flex items-center justify-center">
-                            <Briefcase size={20} className="text-[var(--accent)]" />
-                        </div>
-                        {t('experience.workTitle')}
-                    </motion.h3>
-
-                    <div className="relative">
-                        {experiences.map((exp, index) => (
-                            <TimelineItem key={exp.id} item={exp} index={index} />
-                        ))}
+            <ul className="space-y-3">
+              {learning.map((item) => {
+                const Icon = item.icon;
+                return (
+                  <li key={item.id} className="flex gap-4 rounded-xl border border-[var(--border)] bg-[var(--card)] p-4">
+                    <span className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[var(--muted)] text-[var(--accent)]">
+                      <Icon aria-hidden="true" size={17} />
+                    </span>
+                    <div>
+                      <p className="font-medium leading-6 text-[var(--foreground)]">{t(`experience.${item.id}.title`)}</p>
+                      <p className="mt-1 text-sm text-[var(--muted-foreground)]">{item.organisation}</p>
                     </div>
-                </div>
-
-                {/* Certifications */}
-                <div>
-                    <motion.h3 
-                        className="text-xl font-semibold text-[var(--foreground)] mb-8 flex items-center gap-3"
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                    >
-                        <div className="w-10 h-10 rounded-xl bg-[var(--accent-secondary)]/10 flex items-center justify-center">
-                            <Award size={20} className="text-[var(--accent-secondary)]" />
-                        </div>
-                        {t('experience.certsTitle')}
-                    </motion.h3>
-
-                    <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                        {certifications.map((cert, index) => (
-                            <motion.div
-                                key={cert.id}
-                                initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ delay: index * 0.1, duration: 0.5 }}
-                                className="p-6 rounded-2xl bg-[var(--card)] border border-[var(--border)] hover:border-[var(--accent-secondary)]/30 transition-all duration-300 group"
-                            >
-                                <div className="flex items-start justify-between mb-4">
-                                    <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[var(--accent)] to-[var(--accent-secondary)] flex items-center justify-center">
-                                        <Award size={24} className="text-white" />
-                                    </div>
-                                    <Badge variant="soft" size="sm">{cert.period}</Badge>
-                                </div>
-
-                                <h4 className="text-lg font-bold text-[var(--foreground)] mb-1">
-                                    {cert.organization}
-                                </h4>
-                                <p className="text-[var(--accent-secondary)] font-medium mb-3">
-                                    {t(cert.role)}
-                                </p>
-
-                                {/* Microsoft Badge */}
-                                {cert.badge && (
-                                    <div className="mb-4">
-                                        <img 
-                                            src={cert.badge} 
-                                            alt="Microsoft Certified Badge" 
-                                            className="h-16 w-auto object-contain"
-                                        />
-                                    </div>
-                                )}
-
-                                <div className="flex flex-wrap gap-2">
-                                    {cert.skills?.map((skill) => (
-                                        <span key={skill} className="text-xs px-2.5 py-1 rounded-full bg-[var(--muted)] text-[var(--muted-foreground)]">
-                                            {skill}
-                                        </span>
-                                    ))}
-                                </div>
-                            </motion.div>
-                        ))}
-                    </div>
-                </div>
-            </Container>
-        </Section>
-    );
+                  </li>
+                );
+              })}
+            </ul>
+          </aside>
+        </div>
+      </Container>
+    </Section>
+  );
 }

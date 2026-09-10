@@ -1,200 +1,269 @@
 {
-    "HomePage": {
-        "seo": {
-            "title": "Rafał Maculewicz | Data Analyst & Power BI Expert",
-            "description": "Professional data analyst, Power BI expert, and full-stack developer helping organizations transform data into strategic decisions.",
-            "keywords": "Data Analyst, Power BI, Business Intelligence, Azure, Data Engineering, Full-Stack Developer, Warsaw, Poland"
+  "HomePage": {
+    "seo": {
+      "title": "Rafał Maculewicz | Team & Project Leadership",
+      "description": "Team coordination, project delivery, Business Intelligence consulting and practical training that connect business and technology.",
+      "keywords": "team leadership, project delivery, Business Intelligence, Power BI, stakeholder collaboration, consulting, training"
+    },
+    "title": "Rafał Maculewicz",
+    "role": "Team & Project Leadership • Business Intelligence",
+    "slogan": "Connecting people, business and technology to move complex work forward.",
+    "description": "I help teams organise complex work, align business and technical perspectives, and deliver practical solutions.",
+    "cta": "Let’s talk",
+    "hero": {
+      "eyebrow": "Team coordination • Project delivery • Business Intelligence",
+      "greeting": "Hello, I’m",
+      "title": "I connect people, business and technology.",
+      "subtitle": "I organise BI team work, support project delivery and help turn data into business decisions.",
+      "description": "I help teams organise complex work, align business and technical perspectives, and deliver solutions that remain useful after launch.",
+      "powerbiBadge": "Business Intelligence",
+      "azureBadge": "Project delivery",
+      "ctaPrimary": "Let’s talk",
+      "ctaSecondary": "Explore my experience",
+      "experienceCta": "Explore my experience",
+      "portraitLabel": "Rafał Maculewicz — business and technology",
+      "availability": "Open to team leadership, project delivery, consulting and training opportunities",
+      "scroll": "Explore",
+      "stats": {
+        "years": "Cross-functional experience",
+        "satisfaction": "Trusted collaboration"
+      }
+    },
+    "nav": {
+      "about": "About",
+      "services": "How I help",
+      "projects": "Selected work",
+      "experience": "Experience",
+      "contact": "Contact",
+      "hire": "Let’s talk",
+      "language": "Language",
+      "theme": "Theme"
+      ,"primaryLabel": "Primary navigation"
+      ,"mobileLabel": "Mobile navigation"
+      ,"openMenu": "Open menu"
+      ,"closeMenu": "Close menu"
+      ,"homeLabel": "Go to homepage"
+      ,"skipToContent": "Skip to main content"
+      ,"toggleTheme": "Toggle color theme"
+    },
+    "about": {
+      "label": "Profile",
+      "subtitle": "From marketing to Business Intelligence",
+      "heading": "Helping teams turn complexity into coordinated action",
+      "description": "My work combines team coordination, stakeholder support and hands-on Business Intelligence experience in international organisations.",
+      "skills": "What I bring",
+      "features": {
+        "analytics": {
+          "title": "Business Intelligence",
+          "description": "Understanding reporting, data dependencies and operational needs well enough to guide practical decisions."
         },
-        "title": "Rafał Maculewicz",
-        "role": "Data Analyst • Power BI Expert • Developer",
-        "slogan": "Transforming complex data into strategic business decisions.",
-        
-        "hero": {
-            "greeting": "Hi, I'm",
-            "description": "I help organizations unlock the power of their data through advanced analytics, custom Power BI solutions, and tailored software development. I work with businesses of all sizes – from local companies to international corporations.",
-            "powerbiBadge": "Expert",
-            "azureBadge": "Certified",
-            "ctaPrimary": "Let's Talk",
-            "ctaSecondary": "View Projects",
-            "scroll": "Scroll",
-            "stats": {
-                "years": "Years Experience",
-                "satisfaction": "Client Satisfaction"
-            }
+        "development": {
+          "title": "Project delivery",
+          "description": "Bringing structure to priorities, dependencies and follow-through across teams and stakeholders."
         },
-
-        "nav": {
-            "about": "About",
-            "services": "Services",
-            "projects": "Projects",
-            "experience": "Experience",
-            "contact": "Contact",
-            "hire": "Contact Me",
-            "language": "Language",
-            "theme": "Theme"
+        "training": {
+          "title": "Training & knowledge sharing",
+          "description": "Making complex topics approachable and helping colleagues build confidence in using data."
         },
-
-        "about": {
-            "label": "About Me",
-            "subtitle": "Bridging the gap between technology and business strategy",
-            "heading": "More Than Just Code",
-            "skills": "Core Expertise",
-            "features": {
-                "analytics": {
-                    "title": "Data Analytics",
-                    "description": "Transforming raw data into actionable business insights through advanced analytics and visualization techniques."
-                },
-                "development": {
-                    "title": "Custom Development",
-                    "description": "Building tailored software solutions, web applications, and automation tools to streamline business processes."
-                },
-                "training": {
-                    "title": "Power BI Training",
-                    "description": "Empowering teams with comprehensive Power BI training, from basics to advanced DAX and data modeling."
-                },
-                "consulting": {
-                    "title": "Strategic Consulting",
-                    "description": "Bridging the gap between technology and business strategy to drive data-informed decision making."
-                }
-            }
-        },
-        "aboutText1": "I am a specialist who builds bridges between complex technology and real business needs. My career path is a unique blend of the IT world and management – before fully dedicating myself to data analytics, I gained extensive experience as a Marketing Manager at the international corporation, Bostik.",
-        "aboutText2": "This background ensures that when I build Power BI dashboards or design Azure architecture, I don't just think about the code. I think about how that data will impact your margins, sales efficiency, and decision-making speed. I help companies stop 'guessing' and start acting based on facts.",
-
-        "services": {
-            "label": "Services",
-            "subtitle": "Comprehensive data and development solutions tailored to your business needs",
-            "popular": "Most Popular",
-            "cta": "Get in touch",
-            "trusted": "Trusted by industry leaders",
-            
-            "powerbi": {
-                "title": "Power BI Solutions",
-                "description": "End-to-end business intelligence solutions that transform raw data into actionable insights.",
-                "f1": "Custom dashboard design and development",
-                "f2": "Advanced DAX calculations and data modeling",
-                "f3": "Enterprise-scale report deployment",
-                "f4": "Performance optimization and governance"
-            },
-            "development": {
-                "title": "Custom Development",
-                "description": "Tailored software solutions built with modern technologies to solve your unique challenges.",
-                "f1": "Full-stack web applications",
-                "f2": "Data pipelines and ETL processes",
-                "f3": "API development and integration",
-                "f4": "Process automation solutions"
-            },
-            "training": {
-                "title": "Training & Consulting",
-                "description": "Empower your team with knowledge and best practices in data analytics and BI tools.",
-                "f1": "Corporate Power BI training programs",
-                "f2": "Data literacy workshops",
-                "f3": "Best practices and governance consulting",
-                "f4": "Ongoing mentorship and support"
-            }
-        },
-
-        "projects": {
-            "label": "Portfolio",
-            "subtitle": "Selected projects showcasing expertise in data analytics and software development",
-            "featured": "Featured",
-            "viewProject": "View Project",
-            "visit": "Visit Website",
-            "learnMore": "Learn More",
-            "more": "Want to see more of my work?",
-            "github": "View on GitHub"
-        },
-
-        "experience": {
-            "label": "Experience",
-            "subtitle": "Professional journey spanning corporate leadership, data engineering, and software development",
-            "workTitle": "Work Experience",
-            "certsTitle": "Certifications",
-            "work": "Work",
-            "certificate": "Certificate",
-            
-            "haleon": {
-                "role": "End-to-End System Engineer",
-                "period": "2021 - Present",
-                "description": "Leading Azure-based data solutions and Power BI implementations. Delivering comprehensive training programs and establishing data governance frameworks for enterprise-scale analytics."
-            },
-            "carlsberg": {
-                "role": "Senior Reporting Expert",
-                "period": "2019 - 2021",
-                "description": "Spearheaded process optimization initiatives and built automated reporting systems. Transformed manual reporting workflows into streamlined, self-service analytics platforms."
-            },
-            "teb": {
-                "role": "BI Data Analyst",
-                "period": "2017 - 2019",
-                "description": "Preparing Power BI reports and presenting and discussing data in meetings with various teams in the Research and Analysis Department."
-            },
-            "bostik": {
-                "role": "Marketing Manager",
-                "period": "2014 - 2017",
-                "description": "Managing marketing campaigns in the Polish market, product market positioning, promotional campaigns and sales support. Preparing quarterly reports for senior management."
-            },
-            
-            "fabric": {
-                "title": "Fabric Analytics Engineer Associate"
-            },
-            "scrum": {
-                "title": "Certified Scrum Master & Product Owner"
-            },
-            "powerbi": {
-                "title": "Power BI Masterclass"
-            },
-            "dax": {
-                "title": "DAX Tools"
-            },
-            "ssas": {
-                "title": "SSAS Tabular"
-            },
-            "datawarehouse": {
-                "title": "Data Warehouse (SQL Server)"
-            }
-        },
-
-        "contact": {
-            "label": "Contact",
-            "subtitle": "Ready to transform your data into competitive advantage? Let's discuss your project.",
-            "heading": "Let's Build Something Great Together",
-            "available": "Available for new projects",
-            "response": "Typically respond within 24 hours",
-            "thankYou": "Thank you for reaching out. I'll get back to you shortly.",
-            "sendAnother": "Send another message",
-            "sending": "Sending...",
-            "error": "An error occurred while sending. Please try again or contact me directly via email.",
-            "captchaRequired": "Please verify that you are not a robot.",
-            "captchaInfo": "This site is protected by hCaptcha. Privacy Policy | Terms of Service",
-            
-            "subject": "Subject",
-            "selectSubject": "Select a subject",
-            "subjects": {
-                "powerbi": "Power BI Project",
-                "development": "Custom Development",
-                "training": "Training Request",
-                "consulting": "Consulting",
-                "other": "Other"
-            },
-            "namePlaceholder": "Your name",
-            "emailPlaceholder": "your@email.com",
-            "messagePlaceholder": "Tell me about your project, goals, and timeline..."
-        },
-        "contactText": "You have the data, but do you have the insights? Let's talk about how I can help your business grow.",
-        "sendMessage": "Send Message",
-        "messageSent": "Message Sent!",
-        "name": "Name",
-        "email": "Email",
-        "message": "Message",
-
-        "footer": {
-            "description": "Data Analyst, Power BI Expert, and Developer helping organizations make smarter decisions through data.",
-            "location": "Śrem, Poland",
-            "links": "Quick Links",
-            "contact": "Contact Info",
-            "support": "Support",
-            "rights": "All rights reserved.",
-            "madeWith": "Made with"
+        "consulting": {
+          "title": "Business–technology alignment",
+          "description": "Translating business context into clear direction for technical teams and technical realities into useful choices for stakeholders."
         }
+      },
+      "pillars": {
+        "leadership": {
+          "title": "Team coordination",
+          "description": "Clear priorities, dependable follow-through and an environment in which people can work effectively together."
+        },
+        "businessTechnology": {
+          "title": "Business & technology",
+          "description": "A shared language for stakeholders, analysts and developers, grounded in real delivery constraints."
+        },
+        "development": {
+          "title": "Developing others",
+          "description": "Practical coaching, training and knowledge sharing that helps others become more confident and independent."
+        }
+      }
+    },
+    "aboutText1": "At Haleon, my main area has been organising the work of the Business Intelligence team preparing Supply Chain reports, including OTIF. For more than three years, I have also maintained the Power BI-related part of eSCAPE and supported teams and projects beyond my core remit.",
+    "aboutText2": "Earlier, as Marketing Manager responsible for the Polish market at Bostik, I learned to view technology through business priorities, customers and commercial decisions. I have completed Scrum Master and Product Owner courses delivered by Scrum Inc. and Coaching Essentials as part of Haleon’s managerial development path.",
+    "services": {
+      "label": "How I help",
+      "intro": "Support for teams that need structure, alignment and practical delivery experience.",
+      "subtitle": "How I can help",
+      "popular": "Core focus",
+      "cta": "Discuss your needs",
+      "trusted": "Experience across international organisations",
+      "powerbi": {
+        "title": "Team & project coordination",
+        "description": "Helping teams establish priorities, clarify ownership and keep delivery moving across functions.",
+        "f1": "Work planning and delivery coordination",
+        "f2": "Stakeholder communication and alignment",
+        "f3": "Dependency and issue resolution",
+        "f4": "Support through delivery and adoption"
+      },
+      "development": {
+        "title": "BI & reporting advisory",
+        "description": "Connecting business questions with maintainable reporting and Business Intelligence solutions.",
+        "f1": "Reporting needs and scope clarification",
+        "f2": "Power BI solution guidance",
+        "f3": "Business and technical team alignment",
+        "f4": "Operational support and improvement"
+      },
+      "training": {
+        "title": "Training & knowledge sharing",
+        "description": "Practical learning designed around the team’s context, tools and day-to-day work.",
+        "f1": "Power BI training for teams",
+        "f2": "Data literacy workshops",
+        "f3": "Tailored case studies and learning materials",
+        "f4": "Coaching and ongoing support"
+      }
+    },
+    "projects": {
+      "label": "Selected work",
+      "subtitle": "Ideas put into practice",
+      "technologies": "Technologies used",
+      "items": {
+        "ev_assist": {
+          "eyebrow": "Electric mobility",
+          "title": "EV Assist",
+          "description": "A web application that helps electric-vehicle drivers plan charging needs for a journey.",
+          "detail": "The project combines route planning, vehicle data and charging calculations in a clear interface that can also work as a Progressive Web App."
+        },
+        "fairpact": {
+          "eyebrow": "Contract analysis",
+          "title": "FairPact",
+          "description": "A tool designed to help users identify potentially unfair clauses in contracts.",
+          "detail": "The application combines document processing, OCR and language analysis to make contract review easier to navigate."
+        }
+      },
+      "featured": "Selected",
+      "viewProject": "View project",
+      "visit": "Visit website",
+      "learnMore": "Learn more",
+      "more": "Interested in the thinking behind the work?",
+      "github": "View on GitHub"
+    },
+    "experience": {
+      "label": "Experience",
+      "subtitle": "Professional experience",
+      "workTitle": "Professional experience",
+      "certsTitle": "Learning & development",
+      "work": "Experience",
+      "certificate": "Course",
+      "haleon": {
+        "role": "End-to-End System Engineer",
+        "period": "2021 – Present",
+        "description": "Organising BI team work for Supply Chain reporting, including OTIF; maintaining the Power BI-related part of eSCAPE; and supporting reporting, investigation, automation, recruitment and learning initiatives across teams."
+      },
+      "carlsberg": {
+        "role": "Senior Reporting Expert",
+        "period": "2019 – 2021",
+        "description": "Built reporting solutions, improved processes and trained colleagues in an international shared-services environment."
+      },
+      "teb": {
+        "role": "BI Data Analyst",
+        "period": "2017 – 2019",
+        "description": "Prepared Power BI reports and worked with teams in the Research and Analysis Department to present and discuss findings."
+      },
+      "bostik": {
+        "role": "Marketing Manager — Polish market",
+        "period": "2014 – 2017",
+        "description": "Managed product positioning, campaigns and sales support, and prepared reporting for senior management—experience that continues to shape my business perspective."
+      },
+      "fabric": { "title": "Microsoft Fabric Analytics Engineer Associate" },
+      "scrum": { "title": "Scrum Master & Product Owner courses — Scrum Inc." },
+      "coaching": { "title": "Coaching Essentials — managerial development path" },
+      "powerbi": { "title": "Power BI Masterclass" },
+      "dax": { "title": "DAX Tools" },
+      "ssas": { "title": "SSAS Tabular" },
+      "datawarehouse": { "title": "Data Warehouse (SQL Server)" }
+    },
+    "testimonials": {
+      "label": "Colleague feedback",
+      "heading": "How others describe working with me",
+      "subtitle": "Selected feedback from colleagues across projects and teams.",
+      "translationNote": "Feedback shown in its original English wording.",
+      "items": {
+        "q1": {
+          "quote": "You have consistently displayed ownership, capability & drive, bringing a lot of value with your expertise and reliability",
+          "author": "Christopher Kelly",
+          "context": "Haleon feedback, 2 October 2025"
+        },
+        "q2": {
+          "quote": "He was the one in the tech team taking leadership and accountability to inspire the team.",
+          "author": "Bernd Eglsaeer",
+          "context": "ABACUS feedback, 6 December 2022"
+        },
+        "q3": {
+          "quote": "Rafal is very collaborative, organized, structured and well prepared. Rafal always shows great commitment to project and team goals.",
+          "author": "Bernd Eglsaeer",
+          "context": "Project feedback, 6 December 2022"
+        },
+        "q4": {
+          "quote": "You made a complex topic approachable and relevant, enabling the team to adopt Power BI confidently in their work.",
+          "author": "Agnieszka Szymaniak-Kurowska",
+          "context": "Training feedback, 9 January 2025"
+        },
+        "q5": {
+          "quote": "He participated in all sessions, was flexible and easy to approach, prepared case studies, and represented Haleon with great professionalism.",
+          "author": "Marta Jaworska",
+          "context": "Recruitment support feedback, 5 September 2024"
+        },
+        "q6": {
+          "quote": "He is very accountable and responsible and well trusted and respected by the others.",
+          "author": "Annie Yang",
+          "context": "Haleon feedback, December 2023"
+        }
+      }
+    },
+    "contact": {
+      "label": "Contact",
+      "subtitle": "Let’s discuss team and project leadership, Business Intelligence, training or consulting.",
+      "heading": "Let’s talk about working together.",
+      "available": "Open to relevant opportunities and conversations",
+      "response": "I will respond as soon as possible",
+      "email": "rafal.maculewicz@tuta.com",
+      "phone": "+48 797 432 297",
+      "emailLabel": "Email",
+      "phoneLabel": "Phone",
+      "linkedin": "LinkedIn",
+      "cta": "Send an email",
+      "thankYou": "Thank you for reaching out. I’ll get back to you shortly.",
+      "sendAnother": "Send another message",
+      "sending": "Sending...",
+      "error": "The message could not be sent. Please try again or contact me directly by email.",
+      "captchaRequired": "Please verify that you are not a robot.",
+      "captchaInfo": "This site is protected by hCaptcha. Privacy Policy | Terms of Service",
+      "subject": "Subject",
+      "selectSubject": "Select a subject",
+      "subjects": {
+        "powerbi": "Business Intelligence",
+        "development": "Team or project support",
+        "training": "Training",
+        "consulting": "Consulting",
+        "other": "Other"
+      },
+      "namePlaceholder": "Your name",
+      "emailPlaceholder": "your@email.com",
+      "messagePlaceholder": "Tell me briefly what you would like to discuss..."
+    },
+    "contactText": "Does your team or project need more structure, stronger collaboration or a clearer direction? Let’s talk.",
+    "sendMessage": "Send message",
+    "messageSent": "Message sent",
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "footer": {
+      "description": "Connecting people, business and technology through team coordination, project delivery and Business Intelligence.",
+      "location": "Śrem, Poland",
+      "links": "Explore",
+      "contact": "Contact",
+      "support": "Support",
+      "rights": "All rights reserved.",
+      "madeWith": "Designed with care"
+      ,"tagline": "People, business and technology"
+      ,"backToTop": "Back to top"
     }
+  }
 }

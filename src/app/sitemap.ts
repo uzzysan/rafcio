@@ -1,18 +1,18 @@
-import { MetadataRoute } from 'next';
-import { routing } from '@/i18n/routing';
+import type { MetadataRoute } from 'next';
+
+const siteUrl = 'https://maculewicz.pro';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-    const baseUrl = 'https://maculewicz.pro';
-    const locales = routing.locales;
+    const languages = {
+        en: `${siteUrl}/en`,
+        pl: `${siteUrl}/pl`,
+        'x-default': `${siteUrl}/pl`,
+    };
 
-    const routes = [''].flatMap((route) =>
-        locales.map((locale) => ({
-            url: `${baseUrl}/${locale}${route}`,
-            lastModified: new Date(),
-            changeFrequency: 'monthly' as const,
-            priority: route === '' ? 1 : 0.8,
-        }))
-    );
-
-    return [...routes];
+    return ['pl', 'en'].map((locale) => ({
+        url: `${siteUrl}/${locale}`,
+        changeFrequency: 'monthly' as const,
+        priority: 1,
+        alternates: { languages },
+    }));
 }

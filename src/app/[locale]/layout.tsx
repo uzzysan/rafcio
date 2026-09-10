@@ -1,63 +1,75 @@
-import { Inter, Plus_Jakarta_Sans } from 'next/font/google';
+import type { Metadata } from 'next';
 import { NextIntlClientProvider } from 'next-intl';
-import { getMessages, getTranslations } from 'next-intl/server';
+import { getMessages } from 'next-intl/server';
 import { ThemeProvider } from '@/components/theme-provider';
 import { Navbar } from '@/components/Navbar';
 import { JsonLd } from '@/components/JsonLd';
 import { Analytics } from '@/components/Analytics';
 import "../globals.css";
 
-const inter = Inter({ 
-    subsets: ['latin'],
-    display: 'swap',
-    variable: '--font-inter'
-});
+const siteUrl = 'https://maculewicz.pro';
 
-const plusJakarta = Plus_Jakarta_Sans({
-    subsets: ['latin'],
-    display: 'swap',
-    variable: '--font-jakarta'
-});
+const seo = {
+    en: {
+        title: 'Rafał Maculewicz | Team & Project Leadership',
+        description: 'Rafał Maculewicz connects people, business and technology through project delivery, team coordination, Business Intelligence consulting and practical training.',
+        keywords: ['team leadership', 'project delivery', 'Business Intelligence', 'Power BI', 'stakeholder management', 'team coordination'],
+    },
+    pl: {
+        title: 'Rafał Maculewicz | Zespoły i projekty',
+        description: 'Rafał Maculewicz łączy ludzi, biznes i technologię poprzez prowadzenie projektów, koordynację zespołów, konsulting Business Intelligence i praktyczne szkolenia.',
+        keywords: ['zarządzanie zespołem', 'prowadzenie projektów', 'Business Intelligence', 'Power BI', 'współpraca z interesariuszami', 'koordynacja zespołów'],
+    },
+} as const;
 
-export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
     const { locale } = await params;
-    const t = await getTranslations({ locale, namespace: 'HomePage.seo' });
-
-    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://maculewicz.pro';
+    const language = locale === 'en' ? 'en' : 'pl';
+    const content = seo[language];
+    const localizedUrl = `${siteUrl}/${language}`;
 
     return {
-        metadataBase: new URL(baseUrl),
-        title: t('title'),
-        description: t('description'),
-        keywords: t('keywords').split(', '),
+        metadataBase: new URL(siteUrl),
+        title: content.title,
+        description: content.description,
+        keywords: [...content.keywords],
+        applicationName: 'Rafał Maculewicz',
         authors: [{ name: 'Rafał Maculewicz' }],
+        creator: 'Rafał Maculewicz',
+        publisher: 'Rafał Maculewicz',
+        category: 'Professional profile',
         alternates: {
-            canonical: `${baseUrl}/${locale}`,
+            canonical: localizedUrl,
             languages: {
-                'en-US': `${baseUrl}/en`,
-                'pl-PL': `${baseUrl}/pl`,
+                en: `${siteUrl}/en`,
+                pl: `${siteUrl}/pl`,
+                'x-default': `${siteUrl}/pl`,
             },
         },
         openGraph: {
-            title: t('title'),
-            description: t('description'),
+            title: content.title,
+            description: content.description,
             type: 'website',
-            locale: locale === 'pl' ? 'pl_PL' : 'en_US',
-            url: `${baseUrl}/${locale}`,
-            siteName: 'Rafał Maculewicz Portfolio',
+            locale: language === 'pl' ? 'pl_PL' : 'en_US',
+            alternateLocale: language === 'pl' ? ['en_US'] : ['pl_PL'],
+            url: localizedUrl,
+            siteName: 'Rafał Maculewicz',
         },
         twitter: {
             card: 'summary_large_image',
-            title: t('title'),
-            description: t('description'),
+            title: content.title,
+            description: content.description,
         },
         robots: {
             index: true,
             follow: true,
-        },
-        icons: {
-            icon: '/favicon.ico',
-            apple: '/apple-touch-icon.png', // Suggesting user to add this file
+            googleBot: {
+                index: true,
+                follow: true,
+                'max-image-preview': 'large',
+                'max-snippet': -1,
+                'max-video-preview': -1,
+            },
         },
     };
 }
@@ -73,8 +85,8 @@ export default async function LocaleLayout({
     const messages = await getMessages();
 
     return (
-        <html lang={locale} suppressHydrationWarning className={`${inter.variable} ${plusJakarta.variable}`}>
-            <body className={`${inter.className} antialiased`}>
+        <html lang={locale} suppressHydrationWarning>
+            <body className="antialiased">
                 <Analytics />
                 <JsonLd locale={locale} />
                 <NextIntlClientProvider messages={messages}>

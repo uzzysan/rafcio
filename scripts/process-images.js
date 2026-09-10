@@ -1,7 +1,6 @@
 /* eslint-disable @typescript-eslint/no-require-imports */
 const sharp = require('sharp');
 const fs = require('fs');
-const path = require('path');
 
 const images = [
     { src: 'public/bright_bg.JPG', dest: 'public/bright_bg_optimized.jpg' },

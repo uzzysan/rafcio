@@ -1,71 +1,7 @@
-"use client";
-
-import { motion } from 'framer-motion';
 import { ReactNode } from 'react';
-
-interface SectionProps {
-  children: ReactNode;
-  className?: string;
-  id?: string;
-}
-
-export function Section({ children, className = '', id }: SectionProps) {
-  return (
-    <section 
-      id={id} 
-      className={`section-padding relative overflow-hidden ${className}`}
-    >
-      {children}
-    </section>
-  );
-}
-
-interface SectionHeaderProps {
-  title: string;
-  subtitle?: string;
-  centered?: boolean;
-  className?: string;
-}
-
-export function SectionHeader({ title, subtitle, centered = true, className = '' }: SectionHeaderProps) {
-  return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-100px" }}
-      transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-      className={`${centered ? 'text-center' : ''} mb-16 md:mb-20 ${className}`}
-    >
-      <h2 className="inline-block px-4 py-1.5 mb-4 text-sm font-medium tracking-wider uppercase rounded-full bg-[var(--accent)]/10 text-[var(--accent)] border border-[var(--accent)]/20">
-        {title}
-      </h2>
-      {subtitle && (
-        <p className="text-lg md:text-xl text-[var(--muted-foreground)] max-w-2xl mx-auto leading-relaxed">
-          {subtitle}
-        </p>
-      )}
-    </motion.div>
-  );
-}
-
-interface ContainerProps {
-  children: ReactNode;
-  className?: string;
-  size?: 'sm' | 'md' | 'lg' | 'xl' | 'full';
-}
-
-export function Container({ children, className = '', size = 'lg' }: ContainerProps) {
-  const sizes = {
-    sm: 'max-w-3xl',
-    md: 'max-w-4xl',
-    lg: 'max-w-6xl',
-    xl: 'max-w-7xl',
-    full: 'max-w-full'
-  };
-
-  return (
-    <div className={`mx-auto px-4 sm:px-6 lg:px-8 ${sizes[size]} ${className}`}>
-      {children}
-    </div>
-  );
-}
+interface SectionProps{children:ReactNode;className?:string;id?:string}
+export function Section({children,className='',id}:SectionProps){return <section id={id} className={'section-padding relative '+className}>{children}</section>}
+interface SectionHeaderProps{title:string;subtitle?:string;centered?:boolean;className?:string}
+export function SectionHeader({title,subtitle,centered=false,className=''}:SectionHeaderProps){return <header className={(centered?'text-center mx-auto ':'')+'mb-12 md:mb-16 max-w-3xl '+className}><p className="eyebrow mb-4">{title}</p>{subtitle&&<h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-semibold leading-[1.12] tracking-[-.035em] text-balance">{subtitle}</h2>}</header>}
+interface ContainerProps{children:ReactNode;className?:string;size?:'sm'|'md'|'lg'|'xl'|'full'}
+export function Container({children,className='',size='lg'}:ContainerProps){const sizes={sm:'max-w-3xl',md:'max-w-5xl',lg:'max-w-6xl',xl:'max-w-7xl',full:'max-w-full'};return <div className={'mx-auto w-full px-5 sm:px-8 lg:px-10 '+sizes[size]+' '+className}>{children}</div>}

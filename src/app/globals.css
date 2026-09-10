@@ -4,334 +4,39 @@
 @theme {
   --font-sans: var(--font-inter), system-ui, sans-serif;
   --font-display: var(--font-jakarta), system-ui, sans-serif;
-
-  /* Core colors */
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --color-accent: var(--accent);
-  --color-accent-foreground: var(--accent-foreground);
-  --color-accent-secondary: var(--accent-secondary);
-  
-  /* Card and surface colors */
-  --color-card: var(--card);
-  --color-card-foreground: var(--card-foreground);
-  --color-muted: var(--muted);
-  --color-muted-foreground: var(--muted-foreground);
-  --color-border: var(--border);
-  
-  /* Gradient colors */
-  --color-gradient-start: var(--gradient-start);
-  --color-gradient-end: var(--gradient-end);
-  --color-gradient-accent: var(--gradient-accent);
-
-  --radius-image: 1.5rem;
-  --radius-card: 1.5rem;
-  --radius-button: 9999px;
+  --color-background: var(--background); --color-foreground: var(--foreground);
+  --color-accent: var(--accent); --color-accent-foreground: var(--accent-foreground);
+  --color-accent-secondary: var(--accent-secondary); --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground); --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground); --color-border: var(--border);
+  --radius-image: .25rem; --radius-card: .375rem; --radius-button: 9999px;
 }
 
-/* ========================================
-   LIGHT MODE - Professional & Clean
-   ======================================== */
 :root {
-  /* Base colors */
-  --background: #f8fafc;
-  --foreground: #090d16;
-  
-  /* Primary accent - Indigo / Royal blue for corporate trust */
-  --accent: #4f46e5;
-  --accent-foreground: #ffffff;
-  --accent-secondary: #0ea5e9;
-  
-  /* Surfaces */
-  --card: #ffffff;
-  --card-foreground: #090d16;
-  --muted: #f1f5f9;
-  --muted-foreground: #475569;
-  --border: #e2e8f0;
-  
-  /* Gradients */
-  --gradient-start: #4f46e5;
-  --gradient-end: #0ea5e9;
-  --gradient-accent: #10b981;
-  
-  /* Shadows */
-  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.04);
-  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.05), 0 2px 4px -2px rgb(0 0 0 / 0.05);
-  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.05), 0 4px 6px -4px rgb(0 0 0 / 0.05);
-  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.05), 0 8px 10px -6px rgb(0 0 0 / 0.05);
-  --shadow-glow: 0 0 40px -10px var(--accent);
+  --background:#f5f3ee; --foreground:#172d32; --accent:#23666b;
+  --accent-foreground:#fff; --accent-secondary:#a06443; --card:#fbfaf6;
+  --card-foreground:#172d32; --muted:#eae7df; --muted-foreground:#526267;
+  --border:#d8d3c8; --hairline:rgba(23,45,50,.14); --shadow-sm:0 10px 35px rgba(23,45,50,.07);
 }
-
-/* ========================================
-   DARK MODE - Sophisticated & Obsidian
-   ======================================== */
 .dark {
-  /* Base colors */
-  --background: #050814;
-  --foreground: #f8fafc;
-  
-  /* Primary accent - Cyber Emerald Green / Mint for intelligence & data vibe */
-  --accent: #10b981;
-  --accent-foreground: #050814;
-  --accent-secondary: #06b6d4;
-  
-  /* Surfaces */
-  --card: #0b0f19;
-  --card-foreground: #f8fafc;
-  --muted: #111827;
-  --muted-foreground: #94a3b8;
-  --border: #1f2937;
-  
-  /* Gradients */
-  --gradient-start: #10b981;
-  --gradient-end: #06b6d4;
-  --gradient-accent: #6366f1;
-  
-  /* Shadows */
-  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.3);
-  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.4), 0 2px 4px -2px rgb(0 0 0 / 0.4);
-  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.5), 0 4px 6px -4px rgb(0 0 0 / 0.5);
-  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.5), 0 8px 10px -6px rgb(0 0 0 / 0.5);
-  --shadow-glow: 0 0 60px -20px var(--accent);
+  --background:#102226; --foreground:#f4f1e9; --accent:#78b1b2;
+  --accent-foreground:#102226; --accent-secondary:#d49a75; --card:#152b30;
+  --card-foreground:#f4f1e9; --muted:#193238; --muted-foreground:#bac7c6;
+  --border:#2c454a; --hairline:rgba(244,241,233,.14); --shadow-sm:0 14px 40px rgba(0,0,0,.22);
 }
-
-/* ========================================
-   BASE STYLES
-   ======================================== */
-body {
-  background-color: var(--background);
-  color: var(--foreground);
-  font-family: var(--font-sans);
-  transition: background-color 0.5s cubic-bezier(0.4, 0, 0.2, 1),
-              color 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-/* ========================================
-   GRADIENT UTILITIES
-   ======================================== */
-.gradient-text {
-  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-secondary) 50%, var(--gradient-accent) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-.gradient-bg {
-  background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
-}
-
-.gradient-bg-subtle {
-  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-secondary) 100%);
-  opacity: 0.05;
-}
-
-.gradient-border {
-  position: relative;
-}
-
-.gradient-border::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  padding: 1px;
-  border-radius: inherit;
-  background: linear-gradient(135deg, var(--accent), var(--accent-secondary));
-  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
-}
-
-/* ========================================
-   GLASSMORPHISM
-   ======================================== */
-.glass {
-  background: rgba(255, 255, 255, 0.7);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-}
-
-.dark .glass {
-  background: rgba(15, 23, 42, 0.7);
-  border: 1px solid rgba(255, 255, 255, 0.05);
-}
-
-.glass-card {
-  background: rgba(255, 255, 255, 0.5);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-.dark .glass-card {
-  background: rgba(15, 23, 42, 0.5);
-  border: 1px solid rgba(255, 255, 255, 0.05);
-}
-
-/* ========================================
-   ANIMATED BACKGROUND
-   ======================================== */
-.animated-gradient {
-  background: linear-gradient(-45deg, 
-    var(--background),
-    var(--muted),
-    var(--accent-secondary),
-    var(--accent)
-  );
-  background-size: 400% 400%;
-  animation: gradient-shift 15s ease infinite;
-}
-
-@keyframes gradient-shift {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-/* ========================================
-   GLOW EFFECTS
-   ======================================== */
-.glow {
-  box-shadow: var(--shadow-glow);
-}
-
-.glow-sm {
-  box-shadow: 0 0 20px -5px var(--accent);
-}
-
-.text-glow {
-  text-shadow: 0 0 40px var(--accent);
-}
-
-/* ========================================
-   FLOATING ANIMATION
-   ======================================== */
-@keyframes float {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-20px); }
-}
-
-.animate-float {
-  animation: float 6s ease-in-out infinite;
-}
-
-.animate-float-slow {
-  animation: float 8s ease-in-out infinite;
-}
-
-/* ========================================
-   PULSE GLOW
-   ======================================== */
-@keyframes pulse-glow {
-  0%, 100% { opacity: 0.4; transform: scale(1); }
-  50% { opacity: 0.6; transform: scale(1.05); }
-}
-
-.animate-pulse-glow {
-  animation: pulse-glow 4s ease-in-out infinite;
-}
-
-/* ========================================
-   SHIMMER EFFECT
-   ======================================== */
-@keyframes shimmer {
-  0% { background-position: -200% 0; }
-  100% { background-position: 200% 0; }
-}
-
-.shimmer {
-  background: linear-gradient(
-    90deg,
-    transparent 0%,
-    rgba(255, 255, 255, 0.2) 50%,
-    transparent 100%
-  );
-  background-size: 200% 100%;
-  animation: shimmer 2s infinite;
-}
-
-/* ========================================
-   SCROLLBAR STYLING
-   ======================================== */
-::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
-}
-
-::-webkit-scrollbar-track {
-  background: var(--muted);
-}
-
-::-webkit-scrollbar-thumb {
-  background: var(--muted-foreground);
-  border-radius: 4px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: var(--accent);
-}
-
-/* ========================================
-   SELECTION STYLING
-   ======================================== */
-::selection {
-  background: var(--accent);
-  color: var(--accent-foreground);
-}
-
-/* ========================================
-   FOCUS STYLES
-   ======================================== */
-:focus-visible {
-  outline: 2px solid var(--accent);
-  outline-offset: 2px;
-}
-
-/* ========================================
-   UTILITY CLASSES
-   ======================================== */
-.text-balance {
-  text-wrap: balance;
-}
-
-.text-pretty {
-  text-wrap: pretty;
-}
-
-.font-display {
-  font-family: var(--font-display), var(--font-sans);
-}
-
-.noise-bg {
-  position: relative;
-}
-
-.noise-bg::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  opacity: 0.015;
-  pointer-events: none;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
-  z-index: 1;
-  border-radius: inherit;
-}
-
-.dark .noise-bg::after {
-  opacity: 0.035;
-}
-
-.section-padding {
-  padding-top: 5rem;
-  padding-bottom: 5rem;
-}
-
-@media (min-width: 768px) {
-  .section-padding {
-    padding-top: 8rem;
-    padding-bottom: 8rem;
-  }
-}
+html { scroll-behavior:smooth; scroll-padding-top:5.5rem; }
+body { margin:0; background:var(--background); color:var(--foreground); font-family:var(--font-sans); font-size:1rem; line-height:1.65; -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility; }
+body::before { content:""; position:fixed; inset:0; z-index:-1; pointer-events:none; opacity:.45; background-image:linear-gradient(to right,var(--hairline) 1px,transparent 1px); background-size:min(7vw,6rem) 100%; mask-image:linear-gradient(to bottom,black,transparent 60%); }
+::selection { background:var(--accent-secondary); color:white; }
+:focus-visible { outline:3px solid var(--accent-secondary); outline-offset:3px; }
+.font-display { font-family:var(--font-display),var(--font-sans); }
+.text-balance { text-wrap:balance; } .text-pretty { text-wrap:pretty; }
+.section-padding { padding-block:clamp(5rem,9vw,8.5rem); }
+.editorial-rule { border-top:1px solid var(--border); }
+.eyebrow { color:var(--accent-secondary); font-size:.75rem; font-weight:750; letter-spacing:.16em; text-transform:uppercase; }
+.paper { background:color-mix(in srgb,var(--card) 91%,transparent); border:1px solid var(--border); box-shadow:var(--shadow-sm); }
+.dark .paper { background:color-mix(in srgb,var(--card) 94%,transparent); }
+.link-underline { text-decoration:none; background-image:linear-gradient(var(--accent),var(--accent)); background-position:0 100%; background-repeat:no-repeat; background-size:100% 1px; transition:background-size .2s ease,color .2s ease; }
+.link-underline:hover { color:var(--accent); background-size:35% 2px; }
+@media (prefers-reduced-motion:reduce) { *,*::before,*::after { scroll-behavior:auto!important; animation-duration:.01ms!important; animation-iteration-count:1!important; transition-duration:.01ms!important; } }
+@media (max-width:640px) { body::before { display:none; } }
