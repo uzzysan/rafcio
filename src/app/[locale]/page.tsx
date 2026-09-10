@@ -6,10 +6,12 @@ import { Experience } from '@/components/Experience';
 import { Contact } from '@/components/Contact';
 import { Footer } from '@/components/Footer';
 import { Testimonials } from '@/components/Testimonials';
+import { CursorAtmosphere } from '@/components/CursorAtmosphere';
 
 export default function HomePage() {
     return (
         <div id="main-content" className="flex flex-col min-h-screen" tabIndex={-1}>
+            <CursorAtmosphere />
             <Hero />
             <About />
             <Services />

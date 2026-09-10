@@ -1,1 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-labelledby="t d"><title id="t">RM</title><desc id="d">Rafał Maculewicz monogram</desc><rect width="120" height="120" rx="8" fill="#172D32"/><path d="M20 88V30h23c17 0 27 8 27 22 0 9-5 16-14 20l17 16H57L41 73h-7v15H20Zm14-27h9c8 0 13-3 13-9s-5-9-13-9h-9v18Z" fill="#F5F3EE"/><path d="M70 88V30h11l15 28 15-28h9v58h-14V55L97 76h-3L83 55v33H70Z" fill="#A06443"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-labelledby="title description">
+  <title id="title">RM</title>
+  <desc id="description">Rafał Maculewicz monogram</desc>
+  <rect width="120" height="120" rx="18" fill="#281C2D"/>
+  <path d="M11 34V18a7 7 0 0 1 7-7h16M86 11h16a7 7 0 0 1 7 7v16M109 86v16a7 7 0 0 1-7 7H86M34 109H18a7 7 0 0 1-7-7V86" fill="none" stroke="#B18A57" stroke-width="2" stroke-linecap="round"/>
+  <path d="M57 96V52h8l16 25 16-25h8v44h-9V69L84 88h-6L66 69v27Z" fill="#B18A57"/>
+  <path d="M20 98h34v-5H31V65h16l23 33h13L58 63c11-4 17-12 17-23 0-16-12-24-31-24H20v5h3v72h-3Zm11-42V25h13c14 0 22 5 22 15s-8 16-22 16Z" fill="#F4EFE5" fill-rule="evenodd"/>
+  <path d="M54 65 65 82" fill="none" stroke="#281C2D" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="59.5" cy="73.5" r="2.3" fill="#B18A57"/>
+</svg>
