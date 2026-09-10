@@ -14,7 +14,7 @@
       "eyebrow": "Team coordination • Project delivery • Business Intelligence",
       "greeting": "Hello, I’m",
       "title": "I connect people, business and technology.",
-      "subtitle": "I organise BI team work, support project delivery and help turn data into business decisions.",
+      "subtitle": "I organise BI team work, support project delivery, work with SAP supply-chain and logistics data, and deliver training.",
       "description": "I help teams organise complex work, align business and technical perspectives, and deliver solutions that remain useful after launch.",
       "powerbiBadge": "Business Intelligence",
       "azureBadge": "Project delivery",
@@ -85,8 +85,8 @@
         }
       }
     },
-    "aboutText1": "At Haleon, my main area has been organising the work of the Business Intelligence team preparing Supply Chain reports, including OTIF. For more than three years, I have also maintained the Power BI-related part of eSCAPE and supported teams and projects beyond my core remit.",
-    "aboutText2": "Earlier, as Marketing Manager responsible for the Polish market at Bostik, I learned to view technology through business priorities, customers and commercial decisions. I have completed Scrum Master and Product Owner courses delivered by Scrum Inc. and Coaching Essentials as part of Haleon’s managerial development path.",
+    "aboutText1": "At Haleon, I work with SAP data for supply-chain and logistics needs, organise BI team work, support project delivery and deliver training. I also help teams beyond my core remit with reporting, investigation and knowledge sharing.",
+    "aboutText2": "At Carlsberg Shared Services, my Operational Excellence work involved examining business processes, identifying bottlenecks and supporting process improvements. Earlier, as Marketing Manager for the Polish market at Bostik, I learned to view technology through business priorities, customers and commercial decisions. I have completed Scrum Master and Product Owner courses delivered by Scrum Inc. and Coaching Essentials as part of Haleon’s managerial development path.",
     "services": {
       "label": "How I help",
       "intro": "Support for teams that need structure, alignment and practical delivery experience.",
@@ -154,12 +154,12 @@
       "haleon": {
         "role": "End-to-End System Engineer",
         "period": "2021 – Present",
-        "description": "Organising BI team work for Supply Chain reporting, including OTIF; maintaining the Power BI-related part of eSCAPE; and supporting reporting, investigation, automation, recruitment and learning initiatives across teams."
+        "description": "Working with SAP data for supply-chain and logistics needs, organising BI team work, supporting project delivery and delivering training. Also supporting reporting, investigation, automation, recruitment and learning initiatives across teams."
       },
       "carlsberg": {
         "role": "Senior Reporting Expert",
         "period": "2019 – 2021",
-        "description": "Built reporting solutions, improved processes and trained colleagues in an international shared-services environment."
+        "description": "Combined reporting work with Operational Excellence: examined business processes, identified bottlenecks, supported improvements and trained colleagues in an international shared-services environment."
       },
       "teb": {
         "role": "BI Data Analyst",
@@ -193,7 +193,7 @@
         "q2": {
           "quote": "He was the one in the tech team taking leadership and accountability to inspire the team.",
           "author": "Bernd Eglsaeer",
-          "context": "ABACUS feedback, 6 December 2022"
+          "context": "Project feedback, 6 December 2022"
         },
         "q3": {
           "quote": "Rafal is very collaborative, organized, structured and well prepared. Rafal always shows great commitment to project and team goals.",

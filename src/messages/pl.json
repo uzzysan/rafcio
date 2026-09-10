@@ -14,7 +14,7 @@
       "eyebrow": "Koordynacja zespołów • Realizacja projektów • Business Intelligence",
       "greeting": "Cześć, jestem",
       "title": "Łączę ludzi, biznes i technologię.",
-      "subtitle": "Organizuję pracę zespołów BI, wspieram realizację projektów i pomagam przekładać dane na decyzje biznesowe.",
+      "subtitle": "Organizuję pracę zespołów BI, wspieram realizację projektów, pracuję z danymi SAP dla łańcucha dostaw i logistyki oraz prowadzę szkolenia.",
       "description": "Pomagam zespołom porządkować złożoną pracę, łączyć perspektywę biznesową i techniczną oraz dostarczać rozwiązania użyteczne także po wdrożeniu.",
       "powerbiBadge": "Business Intelligence",
       "azureBadge": "Realizacja projektów",
@@ -85,8 +85,8 @@
         }
       }
     },
-    "aboutText1": "W Haleon moim głównym obszarem było organizowanie pracy zespołu Business Intelligence przygotowującego raporty Supply Chain, w tym OTIF. Od ponad trzech lat utrzymuję także część eSCAPE związaną z Power BI i wspieram zespoły oraz projekty poza moim podstawowym zakresem.",
-    "aboutText2": "Wcześniej, jako Marketing Manager odpowiedzialny za polski rynek w Bostik, nauczyłem się patrzeć na technologię przez pryzmat priorytetów biznesowych, klientów i decyzji handlowych. Ukończyłem kursy Scrum Master i Product Owner prowadzone przez Scrum Inc. oraz Coaching Essentials w ramach ścieżki menedżerskiej w Haleon.",
+    "aboutText1": "W Haleon pracuję z danymi SAP na potrzeby łańcucha dostaw i logistyki, organizuję pracę zespołów BI, wspieram realizację projektów i prowadzę szkolenia. Pomagam też zespołom spoza mojego podstawowego obszaru w raportowaniu, analizie problemów i dzieleniu się wiedzą.",
+    "aboutText2": "W Carlsberg Shared Services zajmowałem się również Operational Excellence: analizowałem procesy biznesowe, identyfikowałem wąskie gardła i wspierałem usprawnienia. Wcześniej, jako Marketing Manager odpowiedzialny za polski rynek w Bostik, nauczyłem się patrzeć na technologię przez pryzmat priorytetów biznesowych, klientów i decyzji handlowych. Ukończyłem kursy Scrum Master i Product Owner prowadzone przez Scrum Inc. oraz Coaching Essentials w ramach ścieżki menedżerskiej w Haleon.",
     "services": {
       "label": "Jak pomagam",
       "intro": "Wsparcie dla zespołów, które potrzebują struktury, uzgodnionego kierunku i praktycznego doświadczenia w realizacji.",
@@ -154,12 +154,12 @@
       "haleon": {
         "role": "End-to-End System Engineer",
         "period": "2021 – obecnie",
-        "description": "Organizowanie pracy zespołu BI przy raportowaniu Supply Chain, w tym OTIF; utrzymanie części eSCAPE związanej z Power BI; wsparcie raportowania, analiz problemów, automatyzacji, rekrutacji i inicjatyw edukacyjnych w różnych zespołach."
+        "description": "Praca z danymi SAP na potrzeby łańcucha dostaw i logistyki, organizowanie pracy zespołów BI, wspieranie realizacji projektów i prowadzenie szkoleń. Ponadto wsparcie raportowania, analizy problemów, automatyzacji, rekrutacji i inicjatyw edukacyjnych w różnych zespołach."
       },
       "carlsberg": {
         "role": "Senior Reporting Expert",
         "period": "2019 – 2021",
-        "description": "Tworzenie rozwiązań raportowych, usprawnianie procesów i szkolenie współpracowników w międzynarodowym centrum usług wspólnych."
+        "description": "Łączenie raportowania z pracą w obszarze Operational Excellence: analiza procesów biznesowych, identyfikowanie wąskich gardeł, wspieranie usprawnień i szkolenie współpracowników w międzynarodowym centrum usług wspólnych."
       },
       "teb": {
         "role": "BI Data Analyst",
@@ -193,7 +193,7 @@
         "q2": {
           "quote": "To on w zespole technicznym przejął inicjatywę i odpowiedzialność, inspirując zespół.",
           "author": "Bernd Eglsaeer",
-          "context": "Opinia dotycząca ABACUS, 6 grudnia 2022"
+          "context": "Opinia projektowa, 6 grudnia 2022"
         },
         "q3": {
           "quote": "Rafał jest bardzo otwarty na współpracę, zorganizowany, metodyczny i dobrze przygotowany. Zawsze wykazuje duże zaangażowanie w cele projektu i zespołu.",
