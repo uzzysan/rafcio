@@ -28,9 +28,10 @@ export function Hero() {
             <p className="mt-5 max-w-xl text-sm text-[var(--muted-foreground)]">{t('hero.availability')}</p>
           </div>
           <div className="relative mx-auto w-full max-w-[31rem]">
-            <div className="absolute -left-5 top-8 h-[calc(100%-4rem)] w-1 bg-[var(--accent-secondary)]" aria-hidden="true" />
-            <div className="relative aspect-[4/5] overflow-hidden rounded-sm border border-[var(--border)] bg-[var(--muted)] shadow-[0_25px_80px_rgba(23,45,50,.16)]">
-              <Image src="/brand/rafal-maculewicz.jpg" alt="Rafał Maculewicz" fill priority sizes="(max-width: 1024px) 90vw, 40vw" className="object-cover object-[52%_35%]" />
+            <div className="absolute -left-5 top-8 h-[calc(100%-4rem)] w-px bg-[var(--accent-secondary)]" aria-hidden="true" />
+            <div className="hero-portrait relative aspect-square overflow-hidden rounded-[var(--radius-image)] bg-[var(--muted)]">
+              <Image src="/bright_bg.jpg" alt="Rafał Maculewicz" fill priority sizes="(max-width: 1024px) 90vw, 40vw" className="hero-portrait-light object-cover" />
+              <Image src="/dark_bg.jpg" alt="Rafał Maculewicz" fill priority sizes="(max-width: 1024px) 90vw, 40vw" className="hero-portrait-dark object-cover" />
             </div>
             <div className="absolute -bottom-5 right-4 bg-[var(--foreground)] px-5 py-3 text-sm font-semibold tracking-wide text-[var(--background)]">{t('hero.portraitLabel')}</div>
           </div>
