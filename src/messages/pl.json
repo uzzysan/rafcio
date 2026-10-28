@@ -37,14 +37,15 @@
       "contact": "Kontakt",
       "hire": "Porozmawiajmy",
       "language": "Język",
-      "theme": "Motyw"
-      ,"primaryLabel": "Główna nawigacja"
-      ,"mobileLabel": "Nawigacja mobilna"
-      ,"openMenu": "Otwórz menu"
-      ,"closeMenu": "Zamknij menu"
-      ,"homeLabel": "Przejdź na stronę główną"
-      ,"skipToContent": "Przejdź do głównej treści"
-      ,"toggleTheme": "Zmień motyw kolorystyczny"
+      "theme": "Motyw",
+      "primaryLabel": "Główna nawigacja",
+      "mobileLabel": "Nawigacja mobilna",
+      "openMenu": "Otwórz menu",
+      "closeMenu": "Zamknij menu",
+      "homeLabel": "Przejdź na stronę główną",
+      "skipToContent": "Przejdź do głównej treści",
+      "toggleTheme": "Zmień motyw kolorystyczny",
+      "backHome": "Strona główna"
     },
     "about": {
       "label": "Profil",
@@ -128,13 +129,51 @@
           "eyebrow": "Elektromobilność",
           "title": "EV Assist",
           "description": "Aplikacja internetowa, która pomaga kierowcom samochodów elektrycznych zaplanować zapotrzebowanie na ładowanie podczas podróży.",
-          "detail": "Projekt łączy planowanie trasy, dane pojazdu i obliczenia dotyczące ładowania w przejrzystym interfejsie, który może działać również jako Progressive Web App."
+          "detail": "Projekt łączy planowanie trasy, dane pojazdu i obliczenia dotyczące ładowania w przejrzystym interfejsie, który może działać również jako Progressive Web App.",
+          "tagline": "Planowanie podróży z myślą o ładowaniu",
+          "summary": "Plan trasy, dane pojazdu i obliczenia ładowania w jednym, przejrzystym interfejsie — dostępnym również jako PWA.",
+          "metaDescription": "EV Assist pomaga kierowcom samochodów elektrycznych planować zapotrzebowanie na ładowanie w trasie. Projekt: React, TypeScript, Vite i PWA.",
+          "overview": "EV Assist powstał z prostego pytania: ile energii naprawdę potrzebuję i gdzie warto ją uzupełnić? Zamiast zostawiać kierowcę z listą ładowarek, aplikacja prowadzi go przez całą decyzję — od trasy i danych pojazdu po konkretny plan ładowania.",
+          "context": "Jazda samochodem elektrycznym w trasie to nie tylko kwestia zasięgu. Znaczenie mają styl jazdy, warunki, zapas bezpieczeństwa i czas, który można poświęcić na postój. Projekt porządkuje te zmienne w jeden czytelny scenariusz podróży.",
+          "highlights": [
+            {
+              "title": "Plan dopasowany do podróży",
+              "body": "Trasa, dane pojazdu i zapotrzebowanie na energię są analizowane razem, a nie w oderwaniu od siebie."
+            },
+            {
+              "title": "Zrozumiałe obliczenia",
+              "body": "Wyniki pokazują, co konkretnie oznaczają dla kierowcy — kiedy i ile warto doładować."
+            },
+            {
+              "title": "Aplikacja w zasięgu ręki",
+              "body": "Interfejs PWA działa w przeglądarce i można dodać go do ekranu głównego telefonu, bez instalacji ze sklepu."
+            }
+          ]
         },
         "fairpact": {
           "eyebrow": "Analiza umów",
           "title": "FairPact",
           "description": "Narzędzie pomagające użytkownikom rozpoznawać potencjalnie niedozwolone zapisy w umowach.",
-          "detail": "Aplikacja łączy przetwarzanie dokumentów, OCR i analizę języka, aby ułatwić poruszanie się po treści umowy."
+          "detail": "Aplikacja łączy przetwarzanie dokumentów, OCR i analizę języka, aby ułatwić poruszanie się po treści umowy.",
+          "tagline": "Czytelniejszy obraz zapisów w umowie",
+          "summary": "OCR, analiza języka i czytelny interfejs, które pomagają zauważyć zapisy warte uwagi — bez zastępowania decyzji użytkownika.",
+          "metaDescription": "FairPact pomaga rozpoznawać potencjalnie niedozwolone zapisy w umowach. Projekt łączy Python, FastAPI, NLP, OCR i Next.js.",
+          "overview": "Umowy są pisane językiem, który rzadko służy czytelnikowi. FairPact porządkuje ten proces: przetwarza dokument, wydobywa treść i pomaga wskazać miejsca, które warto przeanalizować, zanim podejmie się decyzję.",
+          "context": "Analiza umowy wymaga czasu i uwagi, a wiele osób nie wie, od czego zacząć. Projekt zakłada, że narzędzie ma wspierać zrozumienie dokumentu — pokazywać kontekst i sygnalizować ryzyko, pozostawiając ocenę człowiekowi.",
+          "highlights": [
+            {
+              "title": "Od dokumentu do treści",
+              "body": "OCR i przetwarzanie dokumentów zamieniają plik w materiał, na którym można pracować."
+            },
+            {
+              "title": "Analiza języka",
+              "body": "Warstwa NLP pomaga wychwycić fragmenty, które mogą wymagać bliższego spojrzenia."
+            },
+            {
+              "title": "Interfejs, który prowadzi",
+              "body": "Frontend w Next.js porządkuje wynik analizy tak, aby wspierał decyzję, a nie ją zastępował."
+            }
+          ]
         }
       },
       "featured": "Wybrane",
@@ -144,7 +183,8 @@
       "showMore": "Pokaż więcej projektów",
       "showFewer": "Pokaż mniej projektów",
       "more": "Chcesz poznać sposób pracy stojący za projektami?",
-      "github": "Zobacz na GitHub"
+      "github": "Zobacz na GitHub",
+      "allProjects": "Zobacz wszystkie projekty"
     },
     "experience": {
       "label": "Doświadczenie",
@@ -173,13 +213,27 @@
         "period": "2014 – 2017",
         "description": "Zarządzanie pozycjonowaniem produktów, kampaniami i wsparciem sprzedaży oraz przygotowywanie raportów dla kadry zarządzającej — doświadczenie, które do dziś kształtuje moje spojrzenie biznesowe."
       },
-      "fabric": { "title": "Microsoft Fabric Analytics Engineer Associate" },
-      "scrum": { "title": "Kursy Scrum Master i Product Owner — Scrum Inc." },
-      "coaching": { "title": "Coaching Essentials — ścieżka menedżerska" },
-      "powerbi": { "title": "Power BI Masterclass" },
-      "dax": { "title": "DAX Tools" },
-      "ssas": { "title": "SSAS Tabular" },
-      "datawarehouse": { "title": "Data Warehouse (SQL Server)" }
+      "fabric": {
+        "title": "Microsoft Fabric Analytics Engineer Associate"
+      },
+      "scrum": {
+        "title": "Kursy Scrum Master i Product Owner — Scrum Inc."
+      },
+      "coaching": {
+        "title": "Coaching Essentials — ścieżka menedżerska"
+      },
+      "powerbi": {
+        "title": "Power BI Masterclass"
+      },
+      "dax": {
+        "title": "DAX Tools"
+      },
+      "ssas": {
+        "title": "SSAS Tabular"
+      },
+      "datawarehouse": {
+        "title": "Data Warehouse (SQL Server)"
+      }
     },
     "testimonials": {
       "label": "Opinie współpracowników",
@@ -263,9 +317,42 @@
       "contact": "Kontakt",
       "support": "Wsparcie",
       "rights": "Wszelkie prawa zastrzeżone.",
-      "madeWith": "Zaprojektowane z dbałością"
-      ,"tagline": "Ludzie, biznes i technologia"
-      ,"backToTop": "Wróć na górę"
+      "madeWith": "Zaprojektowane z dbałością",
+      "tagline": "Ludzie, biznes i technologia",
+      "backToTop": "Wróć na górę"
     }
+  },
+  "ProjectsPage": {
+    "meta": {
+      "title": "Projekty | Rafał Maculewicz",
+      "description": "Aplikacje, które projektuję i rozwijam — od planowania ładowania w trasie po analizę umów. Poznaj szczegóły projektów EV Assist i FairPact."
+    },
+    "backHome": "Strona główna",
+    "eyebrow": "Portfolio",
+    "title": "Projekty, które zamieniam w działające produkty",
+    "intro": "Wybrane aplikacje, nad którymi pracuję — od pierwszego pomysłu, przez projekt interfejsu, po wdrożenie.",
+    "allProjects": "Wszystkie projekty",
+    "viewDetails": "Zobacz szczegóły",
+    "openProject": "Otwórz projekt",
+    "technologies": "Technologie",
+    "statusLabel": "Status",
+    "status": {
+      "live": "Działa",
+      "in-progress": "W budowie"
+    },
+    "about": "O projekcie",
+    "highlights": "Co powstało",
+    "website": "Strona projektu",
+    "backToProjects": "Wróć do projektów",
+    "homeCta": "Przejdź na stronę główną",
+    "cardHint": "Kliknij kartę, aby zobaczyć pełny opis",
+    "notFound": {
+      "title": "Nie znaleziono projektu",
+      "description": "Ten projekt nie istnieje lub został przeniesiony.",
+      "cta": "Wróć do listy projektów"
+    },
+    "caseStudy": "Studium przypadku",
+    "facts": "W skrócie",
+    "aboutHeading": "Kontekst i podejście"
   }
 }

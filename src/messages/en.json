@@ -37,14 +37,15 @@
       "contact": "Contact",
       "hire": "Let’s talk",
       "language": "Language",
-      "theme": "Theme"
-      ,"primaryLabel": "Primary navigation"
-      ,"mobileLabel": "Mobile navigation"
-      ,"openMenu": "Open menu"
-      ,"closeMenu": "Close menu"
-      ,"homeLabel": "Go to homepage"
-      ,"skipToContent": "Skip to main content"
-      ,"toggleTheme": "Toggle color theme"
+      "theme": "Theme",
+      "primaryLabel": "Primary navigation",
+      "mobileLabel": "Mobile navigation",
+      "openMenu": "Open menu",
+      "closeMenu": "Close menu",
+      "homeLabel": "Go to homepage",
+      "skipToContent": "Skip to main content",
+      "toggleTheme": "Toggle color theme",
+      "backHome": "Home"
     },
     "about": {
       "label": "Profile",
@@ -128,13 +129,51 @@
           "eyebrow": "Electric mobility",
           "title": "EV Assist",
           "description": "A web application that helps electric-vehicle drivers plan charging needs for a journey.",
-          "detail": "The project combines route planning, vehicle data and charging calculations in a clear interface that can also work as a Progressive Web App."
+          "detail": "The project combines route planning, vehicle data and charging calculations in a clear interface that can also work as a Progressive Web App.",
+          "tagline": "Journey planning built around charging",
+          "summary": "Route planning, vehicle data and charging calculations in one clear interface — available as a PWA too.",
+          "metaDescription": "EV Assist helps electric-vehicle drivers plan charging needs on a journey. Built with React, TypeScript, Vite and PWA.",
+          "overview": "EV Assist grew from a simple question: how much energy do I actually need, and where is it worth topping up? Instead of handing the driver a list of chargers, the application walks through the whole decision — from the route and vehicle data to a concrete charging plan.",
+          "context": "Driving an electric car on a longer journey is not just about range. Driving style, conditions, safety margin and the time available for a stop all matter. The project brings these variables together into one legible journey scenario.",
+          "highlights": [
+            {
+              "title": "A plan shaped by the journey",
+              "body": "Route, vehicle data and energy demand are considered together rather than in isolation."
+            },
+            {
+              "title": "Calculations that make sense",
+              "body": "Results explain what they mean for the driver — when and how much is worth charging."
+            },
+            {
+              "title": "The app within reach",
+              "body": "The PWA runs in the browser and can be added to a phone's home screen without an app-store install."
+            }
+          ]
         },
         "fairpact": {
           "eyebrow": "Contract analysis",
           "title": "FairPact",
           "description": "A tool designed to help users identify potentially unfair clauses in contracts.",
-          "detail": "The application combines document processing, OCR and language analysis to make contract review easier to navigate."
+          "detail": "The application combines document processing, OCR and language analysis to make contract review easier to navigate.",
+          "tagline": "A clearer view of contract clauses",
+          "summary": "OCR, language analysis and a clear interface that help spot clauses worth a closer look — without replacing the user's decision.",
+          "metaDescription": "FairPact helps identify potentially unfair clauses in contracts. Built with Python, FastAPI, NLP, OCR and Next.js.",
+          "overview": "Contracts are written in language that rarely serves the reader. FairPact brings order to the process: it processes the document, extracts the content and helps point to passages worth reviewing before a decision is made.",
+          "context": "Reviewing a contract takes time and attention, and many people do not know where to start. The project assumes the tool should support understanding — showing context and flagging risk while leaving the judgement to a person.",
+          "highlights": [
+            {
+              "title": "From document to content",
+              "body": "OCR and document processing turn a file into material that can be worked with."
+            },
+            {
+              "title": "Language analysis",
+              "body": "An NLP layer helps surface passages that may deserve a closer look."
+            },
+            {
+              "title": "An interface that guides",
+              "body": "The Next.js frontend structures the analysis so that it supports a decision instead of replacing it."
+            }
+          ]
         }
       },
       "featured": "Selected",
@@ -144,7 +183,8 @@
       "showMore": "Show more projects",
       "showFewer": "Show fewer projects",
       "more": "Interested in the thinking behind the work?",
-      "github": "View on GitHub"
+      "github": "View on GitHub",
+      "allProjects": "View all projects"
     },
     "experience": {
       "label": "Experience",
@@ -173,13 +213,27 @@
         "period": "2014 – 2017",
         "description": "Managed product positioning, campaigns and sales support, and prepared reporting for senior management—experience that continues to shape my business perspective."
       },
-      "fabric": { "title": "Microsoft Fabric Analytics Engineer Associate" },
-      "scrum": { "title": "Scrum Master & Product Owner courses — Scrum Inc." },
-      "coaching": { "title": "Coaching Essentials — managerial development path" },
-      "powerbi": { "title": "Power BI Masterclass" },
-      "dax": { "title": "DAX Tools" },
-      "ssas": { "title": "SSAS Tabular" },
-      "datawarehouse": { "title": "Data Warehouse (SQL Server)" }
+      "fabric": {
+        "title": "Microsoft Fabric Analytics Engineer Associate"
+      },
+      "scrum": {
+        "title": "Scrum Master & Product Owner courses — Scrum Inc."
+      },
+      "coaching": {
+        "title": "Coaching Essentials — managerial development path"
+      },
+      "powerbi": {
+        "title": "Power BI Masterclass"
+      },
+      "dax": {
+        "title": "DAX Tools"
+      },
+      "ssas": {
+        "title": "SSAS Tabular"
+      },
+      "datawarehouse": {
+        "title": "Data Warehouse (SQL Server)"
+      }
     },
     "testimonials": {
       "label": "Colleague feedback",
@@ -263,9 +317,42 @@
       "contact": "Contact",
       "support": "Support",
       "rights": "All rights reserved.",
-      "madeWith": "Designed with care"
-      ,"tagline": "People, business and technology"
-      ,"backToTop": "Back to top"
+      "madeWith": "Designed with care",
+      "tagline": "People, business and technology",
+      "backToTop": "Back to top"
     }
+  },
+  "ProjectsPage": {
+    "meta": {
+      "title": "Projects | Rafał Maculewicz",
+      "description": "Applications I design and build — from planning charging on a journey to reviewing contracts. Explore EV Assist and FairPact in detail."
+    },
+    "backHome": "Home",
+    "eyebrow": "Portfolio",
+    "title": "Projects I turn into working products",
+    "intro": "Selected applications I am working on — from the first idea, through interface design, to deployment.",
+    "allProjects": "All projects",
+    "viewDetails": "View details",
+    "openProject": "Open project",
+    "technologies": "Technologies",
+    "statusLabel": "Status",
+    "status": {
+      "live": "Live",
+      "in-progress": "In progress"
+    },
+    "about": "About the project",
+    "highlights": "What I built",
+    "website": "Project website",
+    "backToProjects": "Back to projects",
+    "homeCta": "Go to the homepage",
+    "cardHint": "Open a card to read the full story",
+    "notFound": {
+      "title": "Project not found",
+      "description": "This project does not exist or has moved.",
+      "cta": "Back to all projects"
+    },
+    "caseStudy": "Case study",
+    "facts": "At a glance",
+    "aboutHeading": "Context and approach"
   }
 }

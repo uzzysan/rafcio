@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { NextIntlClientProvider } from 'next-intl';
-import { getMessages } from 'next-intl/server';
+import { getMessages, setRequestLocale } from 'next-intl/server';
+import { routing } from '@/i18n/routing';
 import { ThemeProvider } from '@/components/theme-provider';
 import { Navbar } from '@/components/Navbar';
 import { JsonLd } from '@/components/JsonLd';
@@ -21,6 +22,10 @@ const seo = {
         keywords: ['zarządzanie zespołem', 'prowadzenie projektów', 'Business Intelligence', 'Power BI', 'współpraca z interesariuszami', 'koordynacja zespołów'],
     },
 } as const;
+
+export function generateStaticParams() {
+    return routing.locales.map((locale) => ({ locale }));
+}
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
     const { locale } = await params;
@@ -82,6 +87,7 @@ export default async function LocaleLayout({
     params: Promise<{ locale: string }>;
 }) {
     const { locale } = await params;
+    setRequestLocale(locale);
     const messages = await getMessages();
 
     return (
