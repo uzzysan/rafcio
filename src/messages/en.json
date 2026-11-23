@@ -174,6 +174,56 @@
               "body": "The Next.js frontend structures the analysis so that it supports a decision instead of replacing it."
             }
           ]
+        },
+        "sql_map": {
+          "eyebrow": "SQL lineage",
+          "title": "SQL-map",
+          "description": "A static analysis tool that maps which tables and columns an SQL query result comes from — and where conditions and transformations apply along the way.",
+          "detail": "The editor, dependency diagram and inspector work together: paste a query, run the analysis and follow every result column back to its sources. Everything is computed locally, without connecting to a database or executing any SQL.",
+          "tagline": "Know where every column comes from",
+          "summary": "Static SQL lineage analysis in the browser — sources, conditions and transformations traced without executing a single query.",
+          "metaDescription": "SQL-map traces SQL query results back to their source tables and columns. Static, local analysis — no database connection, no query execution, no AI.",
+          "overview": "Complex SQL statements hide their history: joins accumulate, subqueries nest and a result column may travel through a dozen transformations before it reaches the report. SQL-map reconstructs that journey — from the result set back to the source tables and columns, through every join, filter and expression applied on the way.",
+          "context": "The analysis runs entirely in the browser. SQL is never executed, no database connection is made and nothing leaves the workspace — which makes the tool safe even for queries containing confidential data or business logic.",
+          "highlights": [
+            {
+              "title": "Lineage you can click through",
+              "body": "Select a result column to highlight its path in the dependency diagram — sources, intermediate expressions and conditions at every step."
+            },
+            {
+              "title": "Local by design",
+              "body": "Static analysis in the browser means no database connection, no query execution and no AI models — the SQL never leaves the workspace."
+            },
+            {
+              "title": "Built for real projects",
+              "body": "Multi-file import, document switching and external view definitions support analysis of whole scripts rather than isolated statements."
+            }
+          ]
+        },
+        "pq_map": {
+          "eyebrow": "Power Query lineage",
+          "title": "PQ-map",
+          "description": "A deterministic static analysis tool for Power Query M — it reconstructs output schemas, query dependencies and column-level lineage behind Power BI models.",
+          "detail": "Built on the official Microsoft Power Query parser, PQ-map shows schemas, dependencies and column-level lineage in an interactive workspace: graph, editor and inspector working together. The code is analysed, never executed.",
+          "tagline": "See through your Power Query models",
+          "summary": "Deterministic analysis of Power Query M — schemas, dependencies and column-level lineage, reconstructed without running any code.",
+          "metaDescription": "PQ-map statically analyses Power Query M code: output schemas, query dependencies and column-level lineage. Built on the official Microsoft parser — no AI, no execution.",
+          "overview": "Power BI models accrete: queries reference queries, columns get renamed mid-stream and the schema of a step is a guess unless someone verifies it by hand. PQ-map replaces guessing with computation — a deterministic, rule-based analysis that reconstructs every output schema, every dependency and the column-level lineage connecting them.",
+          "context": "The tool is built on the official Microsoft Power Query parser and a transformation registry covering the common table functions. Uncertainty is never fabricated: where a schema cannot be derived, the analysis marks it as partial rather than inventing columns — and credential and URL parameters are redacted before analysis.",
+          "highlights": [
+            {
+              "title": "Schemas, not guesses",
+              "body": "Every step produces a schema snapshot with conservative certainty semantics — unknown inputs yield open schemas, never fabricated columns."
+            },
+            {
+              "title": "Column-level lineage",
+              "body": "Value, condition, join-key, filter and aggregate edges connect sources to results — traversable upstream and downstream in the interactive graph."
+            },
+            {
+              "title": "Private by architecture",
+              "body": "Analysis runs in a browser worker: nothing is executed, nothing is sent anywhere, and sensitive URL parameters are redacted automatically."
+            }
+          ]
         }
       },
       "featured": "Selected",
