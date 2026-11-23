@@ -37,6 +37,24 @@ export const projects: Project[] = [
         logoTransparent: true,
         status: 'live',
     },
+    {
+        id: 'sql_map',
+        slug: 'sql-map',
+        tags: ['SQL', 'TypeScript', 'Web Worker', 'Node.js'],
+        link: 'https://sqlmap.uzzy.cloud',
+        logoUrl: '/sql_map_logo.svg',
+        logoTransparent: false,
+        status: 'live',
+    },
+    {
+        id: 'pq_map',
+        slug: 'pq-map',
+        tags: ['React', 'TypeScript', 'Power Query M', 'Web Worker'],
+        link: 'https://pqmap.uzzy.cloud',
+        logoUrl: '/pq_map_logo.png',
+        logoTransparent: false,
+        status: 'live',
+    },
 ];
 
 export function getProjectBySlug(slug: string): Project | undefined {
