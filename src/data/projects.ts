@@ -55,6 +55,15 @@ export const projects: Project[] = [
         logoTransparent: false,
         status: 'live',
     },
+    {
+        id: 'mapofsap',
+        slug: 'mapofsap',
+        tags: ['TypeScript', 'Vite', 'SAP ECC', 'Metadata'],
+        link: 'https://sapmap.uzzy.cloud',
+        logoUrl: '/mapofsap_logo.svg',
+        logoTransparent: false,
+        status: 'live',
+    },
 ];
 
 export function getProjectBySlug(slug: string): Project | undefined {

@@ -224,6 +224,31 @@
               "body": "Analysis runs in a browser worker: nothing is executed, nothing is sent anywhere, and sensitive URL parameters are redacted automatically."
             }
           ]
+        },
+        "mapofsap": {
+          "eyebrow": "SAP data catalog",
+          "title": "MapOfSAP",
+          "description": "A metadata catalog of SAP ECC sales-area tables — from a single field, through tables, to JOIN paths.",
+          "detail": "A prototype with an interactive field-neighborhood map and JOIN path search between tables; the demo edition ships with a built-in data catalog.",
+          "tagline": "See how SAP tables hold together",
+          "summary": "A metadata catalog of SAP ECC sales tables with a field-neighborhood map and JOIN path search between tables.",
+          "metaDescription": "MapOfSAP is a metadata catalog of SAP ECC sales-area tables: a field map, DDIC relations and JOIN path search. Demo edition ships with a built-in catalog.",
+          "overview": "Anyone who has analyzed sales data in SAP ECC knows the moment: MATNR is everywhere, and nobody remembers which tables actually join and on what conditions. MapOfSAP organizes that knowledge — it catalogs tables, fields and relations, then presents them as a map you can navigate.",
+          "context": "The catalog runs entirely locally: the demo edition uses a built-in dataset, while the external-metadata edition loads a versioned JSON snapshot and validates its structure and references. DDIC relations with incomplete mappings are flagged on the diagram, and JOIN search considers only verified, complete relations.",
+          "highlights": [
+            {
+              "title": "Field-neighborhood map",
+              "body": "Pick a field to see its surroundings: the tables it appears in and the relations connecting its neighbors."
+            },
+            {
+              "title": "JOIN path search",
+              "body": "Choose the tables you want to connect and the catalog proposes available paths — step by step, with concrete join conditions."
+            },
+            {
+              "title": "Metadata under control",
+              "body": "External catalogs reach the app as versioned JSON snapshots with validated structure and field/relation references."
+            }
+          ]
         }
       },
       "featured": "Selected",

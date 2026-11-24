@@ -224,6 +224,31 @@
               "body": "Analiza działa w worku przeglądarki: nic nie jest wykonywane, nic nigdzie nie trafia, a poufne parametry URL są automatycznie zanonimizowane."
             }
           ]
+        },
+        "mapofsap": {
+          "eyebrow": "Katalog danych SAP",
+          "title": "MapOfSAP",
+          "description": "Katalog metadanych tabel SAP ECC z obszaru sprzedaży — od pojedynczego pola, przez tabele, po ścieżki JOIN.",
+          "detail": "Prototyp z interaktywną mapą sąsiedztwa pól i wyszukiwaniem relacji między tabelami; wersja demonstracyjna działa na wbudowanym katalogu danych.",
+          "tagline": "Zobacz, jak tabele SAP trzymają się razem",
+          "summary": "Katalog metadanych tabel SAP ECC z mapą sąsiedztwa pól i wyszukiwaniem ścieżek JOIN między tabelami.",
+          "metaDescription": "MapOfSAP to katalog metadanych tabel SAP ECC z obszaru sprzedaży: mapa pól, relacje DDIC i wyszukiwanie ścieżek JOIN. Wersja demonstracyjna z katalogiem wbudowanym.",
+          "overview": "Każdy, kto analizował dane sprzedażowe w SAP ECC, zna ten moment: pole MATNR jest wszędzie, a nikt nie pamięta, które tabele się ze sobą łączą i na jakich warunkach. MapOfSAP porządkuje tę wiedzę — kataloguje tabele, pola i relacje, a następnie pokazuje je jako mapę, po której można się poruszać.",
+          "context": "Katalog działa w całości lokalnie: wersja demonstracyjna korzysta z wbudowanego zestawu danych, a wydanie z metadanymi zewnętrznymi wczytuje wersjonowaną migawkę JSON i sprawdza jej strukturę oraz referencje. Relacje DDIC z niepełnymi mapowaniami są oznaczane na diagramie, a wyszukiwanie JOIN korzysta wyłącznie ze zweryfikowanych, kompletnych relacji.",
+          "highlights": [
+            {
+              "title": "Mapa sąsiedztwa pól",
+              "body": "Wybierz pole, aby zobaczyć jego otoczenie: tabele, w których występuje, i relacje łączące sąsiadów."
+            },
+            {
+              "title": "Wyszukiwanie ścieżek JOIN",
+              "body": "Wskaż tabele końcowe, a katalog zaproponuje dostępne ścieżki — krok po kroku, z konkretnymi warunkami złączeń."
+            },
+            {
+              "title": "Metadane pod kontrolą",
+              "body": "Zewnętrzne katalogi trafiają do aplikacji jako wersjonowane migawki JSON z walidacją struktury i referencji pól oraz relacji."
+            }
+          ]
         }
       },
       "featured": "Wybrane",
