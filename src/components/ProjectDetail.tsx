@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
-import { ArrowLeft, ArrowRight, ArrowUpRight } from 'lucide-react';
+import { ArrowLeft, ArrowRight, ArrowUpRight, Heart } from 'lucide-react';
 import { Link } from '@/i18n/routing';
 import type { Project } from '@/data/projects';
 import { Container } from '@/components/ui/Section';
@@ -139,19 +139,30 @@ export function ProjectDetail({ project }: { project: Project }) {
                 </div>
               </dl>
 
-              <a
-                href={project.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={`${PRIMARY_PILL} mt-6 w-full sm:w-auto`}
-              >
-                {t('openProject')}
-                <ArrowUpRight
-                  size={17}
-                  aria-hidden="true"
-                  className="motion-safe:transition-transform motion-safe:group-hover:-translate-y-0.5 motion-safe:group-hover:translate-x-0.5"
-                />
-              </a>
+              <div className="mt-6 flex flex-wrap items-center gap-3">
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`${PRIMARY_PILL} w-full sm:w-auto`}
+                >
+                  {t('openProject')}
+                  <ArrowUpRight
+                    size={17}
+                    aria-hidden="true"
+                    className="motion-safe:transition-transform motion-safe:group-hover:-translate-y-0.5 motion-safe:group-hover:translate-x-0.5"
+                  />
+                </a>
+                <a
+                  href="https://suppi.pl/rafcio"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`${DARK_PILL} w-full sm:w-auto`}
+                >
+                  <Heart size={16} aria-hidden="true" />
+                  {t('supportCta')}
+                </a>
+              </div>
             </div>
           </aside>
         </div>
