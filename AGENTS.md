@@ -8,6 +8,10 @@ Professional portfolio website for Rafał Maculewicz - Data Analyst, Power BI Ex
 
 Target audience: Companies, governmental agencies, and higher management.
 
+## Content conventions
+
+**Support button (mandatory):** Every project case-study page (`/[locale]/projects/[slug]`, rendered by `src/components/ProjectDetail.tsx`) must include the "Wesprzyj to co robię" / "Support my work" button linking to `https://suppi.pl/rafcio` (user decision, 2026-11-25). It sits next to the "Otwórz projekt" CTA in the sidebar. The button is defined once in `ProjectDetail.tsx`, so it applies to all current and future projects automatically — when redesigning that component or adding new CTA layouts, keep the support button present and keep both language versions of the `supportCta` key in `src/messages/pl.json` and `en.json` in sync.
+
 ## Commands
 
 ```bash
